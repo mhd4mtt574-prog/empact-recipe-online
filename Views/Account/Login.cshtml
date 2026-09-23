@@ -1,0 +1,28 @@
+@model LoginViewModel
+@{ ViewData["Title"]="Sign in"; }
+<section class="approved-login-shell">
+  <div class="approved-login-visual" aria-label="Smart recipes. Stronger operations."></div>
+  <div class="approved-login-form-side">
+    <div class="approved-login-card">
+      <img class="approved-login-logo" src="/images/food-logo.png" alt="Food by Empact Group" />
+      <h1>Recipe &amp; Costing Management</h1>
+      <p class="approved-login-intro">Sign in to access recipes, costing and approved product lists.</p>
+      @if (TempData["Success"] is string success) { <div class="flash success">✓ @success</div> }
+      <form method="post">
+        <div asp-validation-summary="ModelOnly" class="validation"></div>
+        <label asp-for="Username">Unit code / username</label>
+        <div class="login-input-shell"><span aria-hidden="true">✉</span><input asp-for="Username" autocomplete="username" placeholder="Enter your unit code" autofocus/></div>
+        <span asp-validation-for="Username"></span>
+        <label asp-for="Password"></label>
+        <div class="login-input-shell"><span aria-hidden="true">▣</span><input asp-for="Password" autocomplete="current-password" placeholder="Enter your password"/><button id="togglePassword" type="button" aria-label="Show password">◉</button></div>
+        <span asp-validation-for="Password"></span>
+        <label>Region</label>
+        <div class="login-input-shell"><span aria-hidden="true">▦</span><select disabled><option>Your region is linked to your unit code</option></select></div>
+        <div class="approved-login-options"><label class="check"><input asp-for="RememberMe"/> Remember me</label><span>Contact your administrator for a password reset</span></div>
+        <button class="approved-signin-button" type="submit">Sign in</button>
+      </form>
+      <p class="approved-login-foot">Access is limited to approved Empact units.</p>
+    </div>
+  </div>
+</section>
+@section Scripts {<script>document.getElementById('togglePassword')?.addEventListener('click',()=>{const p=document.getElementById('Password');p.type=p.type==='password'?'text':'password'});</script>}

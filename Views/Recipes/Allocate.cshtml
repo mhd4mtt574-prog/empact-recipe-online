@@ -1,0 +1,12 @@
+@model List<Recipe>
+@{ ViewData["Title"]="Allocate recipes"; }
+<div class="page-heading"><div><span class="eyebrow">ADMINISTRATION</span><h1>Allocate recipes</h1><p>Move recipes between costing departments without changing their ingredients or costing data.</p></div><a class="button secondary" asp-action="Index">← Department costings</a></div>
+@if(TempData["Success"] is string message){<div class="flash success">@message</div>}
+<form method="get" class="filter-panel no-print">
+<div class="search-field"><label for="q">Search recipes</label><div><span>⌕</span><input id="q" name="q" value="@ViewBag.Query" placeholder="Recipe name or code"/></div></div>
+<div><label for="department">Current department</label><select id="department" name="department"><option value="">All departments</option>@foreach(string d in ViewBag.Departments){<option value="@d" selected="@(d==ViewBag.Department)">@d</option>}</select></div>
+<button class="button secondary" type="submit">Apply filters</button><a class="clear-filter" asp-action="Allocate">Clear</a>
+</form>
+<section class="data-panel"><div class="data-panel-head"><h2>Recipe allocation</h2><span>@Model.Count recipes</span></div><div class="table-wrap"><table><thead><tr><th>Recipe</th><th>Current department</th><th>Move to</th></tr></thead><tbody>
+@foreach(var recipe in Model){<tr><td><strong>@recipe.Name</strong><span class="table-sub">@recipe.Code · @recipe.Category</span></td><td><span class="department-chip">@recipe.Department</span></td><td><form asp-action="AllocateRecipe" method="post" class="allocation-row-form"><input type="hidden" name="id" value="@recipe.Id"/><input type="hidden" name="q" value="@ViewBag.Query"/><input type="hidden" name="filterDepartment" value="@ViewBag.Department"/><select name="department" aria-label="New department for @recipe.Name">@foreach(string d in ViewBag.Departments){<option value="@d" selected="@(d==recipe.Department)">@d</option>}</select><button class="button primary compact" type="submit">Allocate</button></form></td></tr>}
+</tbody></table></div></section>

@@ -1,0 +1,13 @@
+@model IReadOnlyList<RecipeCheckResult>
+@{ ViewData["Title"]="Recipe checks"; }
+<div class="page-heading"><div><span class="eyebrow">UNIT COMPLIANCE</span><h1>Recipe checks</h1><p>Automatic recipe validation, approval controls and corrective-action exceptions.</p></div><button class="button" type="button" onclick="window.print()">Print report</button></div>
+<form method="get" class="filter-bar">
+<input name="q" value="@ViewBag.Query" placeholder="Search recipe or code" />
+<select name="department"><option value="">All departments</option>@foreach(var d in (IEnumerable<string>)ViewBag.Departments){<option selected="@(ViewBag.Department==d)">@d</option>}</select>
+<select name="status"><option value="">All statuses</option>@foreach(var s in new[]{"Action required","Review recommended","Passed"}){<option selected="@(ViewBag.Status==s)">@s</option>}</select>
+<button class="button primary">Apply filters</button>
+</form>
+<div class="report-metrics"><div><strong>@Model.Count(x=>x.Status=="Action required")</strong><span>Action required</span></div><div><strong>@Model.Count(x=>x.Status=="Review recommended")</strong><span>Review recommended</span></div><div><strong>@Model.Count(x=>x.Status=="Passed")</strong><span>Passed</span></div></div>
+<div class="table-wrap"><table><thead><tr><th>Recipe</th><th>Department</th><th>Status</th><th>Critical</th><th>Warnings</th><th>Checks and corrective actions</th></tr></thead><tbody>
+@foreach(var row in Model){<tr><td><strong>@row.Code</strong><br/><a asp-controller="Recipes" asp-action="Edit" asp-route-id="@row.RecipeId" title="Open this recipe for correction"><strong>@row.Recipe</strong></a></td><td>@row.Department</td><td><span class="status-pill @(row.CriticalCount>0?"danger":row.WarningCount>0?"warning":"success")">@row.Status</span></td><td>@row.CriticalCount</td><td>@row.WarningCount</td><td><details><summary>View @row.Issues.Count check result(s)</summary><ul>@foreach(var issue in row.Issues){<li><strong>@issue.Check:</strong> @issue.Message <small>(@issue.Code)</small></li>}</ul></details></td></tr>}
+</tbody></table></div>

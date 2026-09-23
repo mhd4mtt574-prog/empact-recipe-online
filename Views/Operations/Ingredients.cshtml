@@ -1,0 +1,3 @@
+@{ ViewData["Title"]="Ingredients"; var items=(IEnumerable<dynamic>)ViewBag.Items; }
+<div class="page-heading"><div><span class="eyebrow">MASTER DATA</span><h1>Ingredients</h1><p>Review ingredients used throughout the recipe library.</p></div></div>
+<section class="data-panel"><div class="data-panel-head"><h2>Ingredient overview</h2><span>@items.Count() records shown</span></div><div class="table-wrap"><table><thead><tr><th>Ingredient</th><th>Recipes using it</th><th>Average unit cost</th></tr></thead><tbody>@foreach(var i in items){<tr><td><strong>@i.Name</strong></td><td>@i.Recipes</td><td>R @i.AverageCost.ToString("N2")</td></tr>}</tbody></table></div></section>

@@ -1,0 +1,101 @@
+@model ResalePricingViewModel
+@{ ViewData["Title"] = "Resale Pricing"; }
+
+<section class="food-page-hero resale-hero illustrated-hero">
+    <div>
+        <span class="food-eyebrow">VALUE ADDED · RESALE PRICING</span>
+        <h1>Recommended resale selling prices</h1>
+        <p>Welcome @Model.AccessName. Use this point-of-sale update list to review the current selling prices for your allocated category.</p>
+    </div>
+    <div class="resale-hero-meta">
+        <span>UNIT</span><strong>@(string.IsNullOrWhiteSpace(Model.UnitCode) ? Model.UnitName : $"{Model.UnitCode} · {Model.UnitName}")</strong>
+        <b>CATEGORY @Model.Category</b>
+    </div>
+</section>
+
+<section class="resale-pricebook-shell resale-list-layout">
+    <aside class="pricebook-categories no-print">
+        <div class="pricebook-brand"><span>PRODUCT CATEGORY</span><strong>Browse the price book</strong></div>
+        <a class="active" href="?unitCode=@Model.UnitCode">▦ <span>All Categories</span></a>
+        @foreach (var cat in Model.Prices.Select(x=>x.MainCategory).Where(x=>!string.IsNullOrWhiteSpace(x)).Distinct(StringComparer.OrdinalIgnoreCase).OrderBy(x=>x).Take(14))
+        {
+            <a href="?unitCode=@Model.UnitCode&search=@Uri.EscapeDataString(cat)">› <span>@cat</span></a>
+        }
+        <div class="pricebook-source"><small>TOTAL ITEMS</small><strong>@Model.Prices.Count</strong><span>Pricing source</span><b>@Model.SourcePricingWorkbook</b></div>
+    </aside>
+
+    <div class="pricebook-main">
+        <div class="pricebook-toolbar no-print">
+            @if (Model.IsSeniorManager)
+            {
+                <form asp-action="Index" method="get" class="pricebook-management-filter">
+                    <select name="unitCode" onchange="this.form.submit()">
+                        <option value="">Management / Sales category view</option>
+                        @foreach (var unit in Model.Units){<option value="@unit.Code" selected="@(unit.Code.Equals(Model.UnitCode, StringComparison.OrdinalIgnoreCase))">@unit.Code · @unit.Name · Cat @unit.Category</option>}
+                    </select>
+                    @if (string.IsNullOrWhiteSpace(Model.UnitCode))
+                    {
+                        <select name="category" onchange="this.form.submit()"><option value="A" selected="@(Model.Category == "A")">Category A</option><option value="B" selected="@(Model.Category == "B")">Category B</option></select>
+                    }
+                    <input type="hidden" name="search" value="@Model.Search" />
+                </form>
+            }
+            else if (Model.Units.Count > 1)
+            {
+                <form asp-action="Index" method="get" class="pricebook-management-filter"><select name="unitCode" onchange="this.form.submit()">@foreach (var unit in Model.Units){<option value="@unit.Code" selected="@(unit.Code.Equals(Model.UnitCode, StringComparison.OrdinalIgnoreCase))">@unit.Code · @unit.Name</option>}</select></form>
+            }
+            <form asp-action="Index" method="get" class="pricebook-search">
+                <input type="hidden" name="unitCode" value="@Model.UnitCode" />
+                @if (Model.IsSeniorManager && string.IsNullOrWhiteSpace(Model.UnitCode)){<input type="hidden" name="category" value="@Model.Category" />}
+                <span>⌕</span><input name="search" value="@Model.Search" placeholder="Search item code, product, brand, pack size or category..." /><button class="brand-button primary" type="submit">Search</button>
+            </form>
+            <button type="button" class="brand-button outline" onclick="window.print()">Print / Save PDF</button><form asp-action="Lock" method="post"><button type="submit" class="brand-button outline">Exit pricing</button></form>
+        </div>
+
+        <div class="pricebook-summary-row resale-list-summary">
+            <article><small>YOUR UNIT</small><strong>@Model.UnitCode</strong><span>@Model.UnitName</span></article>
+            <article><small>PRICING CATEGORY</small><strong>Category @Model.Category</strong><span>Automatically allocated</span></article>
+            <article><small>ITEMS DISPLAYED</small><strong>@Model.Prices.Count</strong><span>POS update list</span></article>
+            <article class="yellow"><small>PRICING SOURCE</small><strong>@Model.SourcePricingWorkbook</strong><span>@Model.SourceSheet</span></article>
+        </div>
+
+        <section class="resale-pos-card">
+            <div class="resale-pos-head">
+                <div>
+                    <span class="food-eyebrow">POINT OF SALE UPDATE LIST</span>
+                    <h2>Category @Model.Category selling prices</h2>
+                    <p>Use the selling price column to update your point-of-sale system. Nett cost is intentionally not displayed in this unit-facing list.</p>
+                </div>
+                <strong>@Model.Prices.Count item(s)</strong>
+            </div>
+
+            <div class="resale-pos-table-wrap">
+                <table class="resale-pos-table">
+                    <thead>
+                        <tr>
+                            <th>Item code</th>
+                            <th>Product / pack</th>
+                            <th>Category</th>
+                            <th class="pos-price-col">Selling price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.Prices)
+                    {
+                        <tr>
+                            <td><span class="resale-item-code">@item.ItemCode</span></td>
+                            <td class="pos-product-cell">
+                                <strong>@item.ItemDescription</strong>
+                                <small>@item.BrandCategorySize</small>
+                                <small>@item.Brand @item.Puom</small>
+                            </td>
+                            <td class="pos-category-cell"><strong>@item.MainCategory</strong><small>@item.Uom</small></td>
+                            <td class="pos-price-col"><strong>R @item.SellingPrice.ToString("N2")</strong></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</section>

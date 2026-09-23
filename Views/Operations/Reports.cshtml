@@ -1,0 +1,99 @@
+@model ReportsViewModel
+@{ ViewData["Title"]="Reports"; }
+<div class="page-heading no-print">
+    <div><span class="eyebrow">COMPLIANCE & TRACKING</span><h1>@(Model.IsAdministrator ? "Administrator reports" : "Daily tie-back")</h1><p>@(Model.IsAdministrator ? "Monitor recipe adoption, unit activity, APL compliance, GP margins, promotions and daily tie-back submissions." : "Upload your unit’s daily tie-back sheet before 09:00.")</p></div>
+    <button class="button secondary" type="button" onclick="window.print()">🖨 Print current report</button>
+</div>
+<section class="tieback-upload-panel no-print">
+    <div>
+        <span class="eyebrow">DAILY UNIT CONTROL</span>
+        <h2>Upload daily tie-back sheet</h2>
+        <p><strong>Unit: @Model.CurrentUnit</strong><br />Required each day by 09:00. Accepted formats: PDF, Excel and CSV. Maximum file size: 25 MB.</p>
+        @if(Model.TodayUpload is not null){<p class="tieback-confirmation">✓ Today’s sheet is loaded · @Model.TodayUpload.OriginalFileName · uploaded at @Model.TodayUpload.UploadedAtUtc.ToLocalTime().ToString("HH:mm") by @Model.TodayUpload.UploadedBy.</p>}
+    </div>
+    @if(Model.TodayUpload is null)
+    {
+        <form asp-action="UploadTieBack" method="post" enctype="multipart/form-data" class="tieback-upload-form">
+            <label>Sheet date<input type="date" name="businessDate" value="@DateTime.Today.ToString("yyyy-MM-dd")" max="@DateTime.Today.ToString("yyyy-MM-dd")" required /></label>
+            <label>Daily tie-back file<input type="file" name="tieBackFile" accept=".pdf,.xlsx,.xls,.xlsm,.csv" required /></label>
+            <button class="button primary" type="submit">⬆ Upload tie-back sheet</button>
+        </form>
+    }
+    else
+    {
+        <div class="tieback-loaded-actions">
+            <a class="button secondary" asp-action="DownloadTieBack" asp-route-id="@Model.TodayUpload.Id">Download loaded sheet</a>
+            <details>
+                <summary class="button secondary compact">Replace today’s sheet</summary>
+                <form asp-action="UploadTieBack" method="post" enctype="multipart/form-data" class="tieback-upload-form replacement">
+                    <input type="hidden" name="businessDate" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <label>Replacement file<input type="file" name="tieBackFile" accept=".pdf,.xlsx,.xls,.xlsm,.csv" required /></label>
+                    <button class="button primary" type="submit">Replace loaded sheet</button>
+                </form>
+            </details>
+        </div>
+    }
+</section>
+@if(Model.IsAdministrator && Model.TodayMissingAfterDeadline > 0){<div class="tieback-alert no-print">⚠ <strong>@Model.TodayMissingAfterDeadline unit(s)</strong> have not uploaded today’s tie-back sheet by 09:00. Open the Daily tie-back tab for details.</div>}
+@if(Model.IsAdministrator){
+<form method="get" class="report-filter no-print">
+    <label>From<input type="date" name="from" value="@Model.From.ToString("yyyy-MM-dd")" /></label>
+    <label>To<input type="date" name="to" value="@Model.To.ToString("yyyy-MM-dd")" /></label>
+    <label>Region<select name="region"><option value="">All regions</option>@foreach(var x in Model.Regions){<option selected="@(x==Model.Region)">@x</option>}</select></label>
+    <label>Unit<select name="unit"><option value="">All units</option>@foreach(var x in Model.Units){<option selected="@(x==Model.Unit)">@x</option>}</select></label>
+    <label>Department<select name="department"><option value="">All departments</option>@foreach(var x in Model.Departments){<option selected="@(x==Model.Department)">@x</option>}</select></label>
+    <label>User<input type="search" name="userQuery" value="@Model.UserQuery" placeholder="Name or username" /></label>
+    <button class="button primary" type="submit">Apply filters</button>
+</form>
+
+<nav class="report-tabs no-print" aria-label="Report selection">
+    <button type="button" class="active" data-report-tab="compliance">1. Unit compliance</button>
+    <button type="button" data-report-tab="activity">2. Recipe & user activity</button>
+    <button type="button" data-report-tab="apl">3. APL compliance</button>
+    <button type="button" data-report-tab="gp">4. GP margin</button>
+    <button type="button" data-report-tab="promotions">5. Promotion compliance</button>
+    <button type="button" data-report-tab="tieback">6. Daily tie-back</button>
+</nav>
+
+<section class="report-section active" data-report-panel="compliance">
+    <div class="data-panel-head"><div><h2>Unit compliance dashboard</h2><p>Score combines active use, recipe views, recipe variety, GP margin updates and promotion activity during the selected period.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="compliance" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-unit="@Model.Unit" asp-route-region="@Model.Region" asp-route-department="@Model.Department" asp-route-userQuery="@Model.UserQuery">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Unit</th><th>Region</th><th>Active users</th><th>Recipe views</th><th>Recipes used</th><th>Margins set</th><th>Promotion actions</th><th>Score</th><th>Status</th></tr></thead><tbody>@foreach(var x in Model.UnitCompliance){<tr><td>@x.Unit</td><td>@x.Region</td><td>@x.ActiveUsers</td><td>@x.RecipeViews</td><td>@x.RecipesUsed</td><td>@x.MarginsSet</td><td>@x.PromotionActions</td><td><strong>@x.ComplianceScore%</strong></td><td><span class="report-status @x.Status.ToLowerInvariant()">@x.Status</span></td></tr>}</tbody></table></div>
+</section>
+
+<section class="report-section" data-report-panel="activity">
+    <div class="data-panel-head"><div><h2>Recipe and user activity</h2><p>Tracks sign-ins, recipe views, margin changes and promotion actions by user.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="activity" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-unit="@Model.Unit" asp-route-region="@Model.Region" asp-route-department="@Model.Department" asp-route-userQuery="@Model.UserQuery">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Role</th><th>Unit</th><th>Region</th><th>Last login</th><th>Last activity</th><th>Logins</th><th>Recipe views</th><th>Margin updates</th><th>Promotion actions</th></tr></thead><tbody>@foreach(var x in Model.UserActivity){<tr><td>@x.User</td><td>@x.Role</td><td>@x.Unit</td><td>@x.Region</td><td>@(x.LastLoginUtc?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "—")</td><td>@(x.LastActivityUtc?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "—")</td><td>@x.Logins</td><td>@x.RecipeViews</td><td>@x.MarginUpdates</td><td>@x.PromotionActions</td></tr>}</tbody></table></div>
+</section>
+
+<section class="report-section" data-report-panel="apl">
+    <div class="data-panel-head"><div><h2>APL and best-value readiness</h2><p>Shows current recipe ingredient lines linked to approved products. Best-value decisions can only be calculated reliably for linked lines with valid pack data.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="apl" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-department="@Model.Department">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Recipe</th><th>Code</th><th>Department</th><th>Ingredient lines</th><th>APL linked</th><th>Missing codes</th><th>Compliance</th></tr></thead><tbody>@foreach(var x in Model.AplCompliance){<tr><td>@x.Recipe</td><td>@x.Code</td><td>@x.Department</td><td>@x.IngredientLines</td><td>@x.LinkedLines</td><td>@x.MissingCodes</td><td><strong>@x.CompliancePercent.ToString("N1")%</strong></td></tr>}</tbody></table></div>
+</section>
+
+<section class="report-section" data-report-panel="gp">
+    <div class="data-panel-head"><div><h2>Desired GP margin and selling price</h2><p>Unit-specific target margins and the selling price required from the current recipe cost.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="gp" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-unit="@Model.Unit" asp-route-department="@Model.Department">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Unit</th><th>Recipe</th><th>Department</th><th>Cost / portion</th><th>Desired GP</th><th>Required selling price</th><th>Updated</th><th>Updated by</th></tr></thead><tbody>@foreach(var x in Model.GpMargins){<tr><td>@x.Unit</td><td>@x.Recipe</td><td>@x.Department</td><td>R @x.CostPerPortion.ToString("N2")</td><td>@x.DesiredMarginPercent.ToString("N2")%</td><td><strong>R @x.RequiredSellingPrice.ToString("N2")</strong></td><td>@x.UpdatedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</td><td>@x.UpdatedBy</td></tr>}</tbody></table></div>
+</section>
+
+<section class="report-section" data-report-panel="promotions">
+    <div class="data-panel-head"><div><h2>Promotion access and acknowledgement</h2><p>Tracks views, downloads and print actions by unit. A download or print is treated as completed access.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="promotions" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-unit="@Model.Unit" asp-route-region="@Model.Region">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Promotion</th><th>Unit</th><th>Region</th><th>Views</th><th>Downloads</th><th>Prints</th><th>Last action</th><th>Status</th></tr></thead><tbody>@foreach(var x in Model.PromotionCompliance){<tr><td>@x.Promotion</td><td>@x.Unit</td><td>@x.Region</td><td>@x.Views</td><td>@x.Downloads</td><td>@x.Prints</td><td>@(x.LastActionUtc?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "—")</td><td><span class="report-status @(x.Status=="Complete"?"green":x.Status=="Viewed"?"amber":"red")">@x.Status</span></td></tr>}</tbody></table></div>
+</section>
+
+<section class="report-section" data-report-panel="tieback">
+    <div class="data-panel-head"><div><h2>Daily tie-back compliance</h2><p>Tracks every unit’s daily upload against the 09:00 deadline.</p></div><a class="button secondary compact no-print" asp-action="ExportReport" asp-route-report="tieback" asp-route-from="@Model.From.ToString("yyyy-MM-dd")" asp-route-to="@Model.To.ToString("yyyy-MM-dd")" asp-route-unit="@Model.Unit" asp-route-region="@Model.Region">⬇ CSV</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Date</th><th>Unit</th><th>Region</th><th>Status</th><th>Uploaded at</th><th>Uploaded by</th><th>Planned GP</th><th>Actual GP</th><th>File</th></tr></thead><tbody>@foreach(var x in Model.DailyTieBacks){<tr><td>@x.BusinessDate.ToString("dd MMM yyyy")</td><td>@x.Unit</td><td>@x.Region</td><td><span class="report-status @(x.Status=="Uploaded on time"?"green":x.Status=="Pending"?"amber":"red")">@x.Status</span></td><td>@(x.UploadedAtUtc?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "—")</td><td>@(string.IsNullOrWhiteSpace(x.UploadedBy)?"—":x.UploadedBy)</td><td class="gp-dashboard-cell">@if(x.PlannedGpPercent.HasValue || x.PlannedGpRand.HasValue){<strong>@(x.PlannedGpPercent?.ToString("N2") ?? "—")@(x.PlannedGpPercent.HasValue?"%":"")</strong><small>@(x.PlannedGpRand.HasValue ? $"R {x.PlannedGpRand.Value:N2}" : "—")</small>}else{<span>—</span>}</td><td class="gp-dashboard-cell">@if(x.ActualGpPercent.HasValue || x.ActualGpRand.HasValue){<strong>@(x.ActualGpPercent?.ToString("N2") ?? "—")@(x.ActualGpPercent.HasValue?"%":"")</strong><small>@(x.ActualGpRand.HasValue ? $"R {x.ActualGpRand.Value:N2}" : "—")</small>}else{<span>—</span>}</td><td>@if(x.UploadId.HasValue){<a class="button secondary compact" asp-action="DownloadTieBack" asp-route-id="@x.UploadId">Download</a>}else{<span>—</span>}</td></tr>}</tbody></table></div>
+</section>
+
+}
+
+@section Scripts {
+<script>
+(() => {
+ const buttons=[...document.querySelectorAll('[data-report-tab]')], panels=[...document.querySelectorAll('[data-report-panel]')];
+ const show=name=>{buttons.forEach(b=>b.classList.toggle('active',b.dataset.reportTab===name));panels.forEach(p=>p.classList.toggle('active',p.dataset.reportPanel===name));};
+ buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.reportTab)));
+ const hash=location.hash.replace('#',''); if(buttons.some(b=>b.dataset.reportTab===hash)) show(hash);
+})();
+</script>
+}

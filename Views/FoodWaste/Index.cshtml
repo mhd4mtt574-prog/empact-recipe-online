@@ -1,0 +1,226 @@
+@model FoodWasteDashboardViewModel
+@using System.Globalization
+@{
+    ViewData["Title"] = "Food Waste";
+    var m = Model.Month;
+    string pc(decimal v) => v.ToString("N1", CultureInfo.InvariantCulture);
+    string wheel(IEnumerable<FoodWasteCategoryTotal> items)
+    {
+        var colours = new[] { "#00afbc", "#ffb700", "#0d293b", "#0273cf", "#cf131e", "#76c893" };
+        var start = 0;
+        var parts = new List<string>();
+        var list = items.Where(x => x.Value > 0).ToList();
+        if (list.Count == 0) return "#edf4f5 0 100%";
+        for (var i = 0; i < list.Count; i++)
+        {
+            var end = i == list.Count - 1 ? 100 : start + list[i].Percent;
+            parts.Add($"{colours[i % colours.Length]} {start}% {end}%");
+            start = end;
+        }
+        return string.Join(",", parts);
+    }
+}
+<section class="food-waste-hero illustrated-waste-hero">
+    <div>
+        <span class="food-eyebrow">FOOD WASTE PROGRAMME</span>
+        <h1>Food Waste Tracker</h1>
+        <p>Capture workstation waste and the monthly tracker daily, then monitor compliance and waste trends across units.</p>
+    </div>
+    <div class="food-waste-source">
+        <strong>PROC40 · F14a · F14b</strong>
+        <span>Daily records, monthly tracker and programme compliance</span>
+    </div>
+</section>
+
+<section class="food-waste-docs no-print">
+    <a asp-action="Document" asp-route-id="proc40"><strong>PROC40</strong><span>Food Waste Management SOP</span></a>
+    <a asp-action="Document" asp-route-id="f14a"><strong>F14a</strong><span>Workstation Waste Record Form</span></a>
+    <a asp-action="Document" asp-route-id="f14b"><strong>F14b</strong><span>Food Waste Tracker Template</span></a>
+    <a asp-action="Document" asp-route-id="training"><strong>Training</strong><span>Food Waste Training Pack</span></a>
+</section>
+
+<form method="get" class="food-waste-filter no-print">
+    <label>Month<input type="month" name="month" value="@Model.Month.ToString("yyyy-MM")" /></label>
+    @if(Model.CanSelectUnit)
+    {
+        <label>Region<select name="region" onchange="this.form.submit()"><option value="">All regions</option>@foreach(var r in Model.Regions){<option value="@r" selected="@(r==Model.Region)">@r</option>}</select></label>
+        <label>Unit<select name="unitCode"><option value="">All units in region</option>@foreach(var u in Model.Units){<option value="@u.Code" selected="@(u.Code==Model.UnitCode)">@u.Label</option>}</select></label>
+    }
+    <button class="brand-button primary">Apply filters</button>
+    <button type="button" class="brand-button outline" onclick="window.print()">Print / Save PDF</button>
+    @if(Model.CanSelectUnit){<a class="brand-button outline" asp-action="ExportCsv" asp-route-region="@Model.Region" asp-route-unitCode="@Model.UnitCode" asp-route-month="@Model.Month.ToString("yyyy-MM-01")">Export CSV</a>}
+</form>
+
+<section class="food-waste-kpis">
+    <article><small>Current scope</small><strong>@Model.ScopeLabel</strong><span>@Model.Month.ToString("MMMM yyyy")</span></article>
+    <article><small>Monthly food waste</small><strong>@pc(Model.Totals.TotalFoodWasteKg) kg</strong><span>@pc(Model.Totals.WasteKgPerMeal) kg per meal</span></article>
+    <article><small>Waste diverted</small><strong>@pc(Model.Totals.TotalDiversionKg) kg</strong><span>@pc(Model.Totals.UsedOilLitres) L used oil</span></article>
+    <article><small>Compliance</small><strong>@Model.CompliancePercent%</strong><span>@Model.SubmittedDays of @(Model.ExpectedWorkDays * Math.Max(1, Model.UnitCode == "" ? Model.Units.Count : 1)) expected submissions</span></article>
+</section>
+
+<section class="food-waste-grid">
+    <article class="food-waste-card wheel-card">
+        <div><h2>Food waste by category</h2><p>Monthly total across the five PROC40 categories.</p></div>
+        <div class="waste-wheel" style="--segments:@wheel(Model.CategoryTotals)"><strong>@pc(Model.Totals.TotalFoodWasteKg)</strong><span>kg</span></div>
+        <div class="wheel-legend">@foreach(var item in Model.CategoryTotals){<div><i style="--p:@item.Percent%"></i><span>@item.Name</span><b>@pc(item.Value) @item.Unit</b></div>}</div>
+    </article>
+    <article class="food-waste-card wheel-card">
+        <div><h2>Waste diversion</h2><p>Bokashi, Bio Bins, other composting and oil collection.</p></div>
+        <div class="waste-wheel small" style="--segments:@wheel(Model.DiversionTotals)"><strong>@pc(Model.Totals.TotalDiversionKg)</strong><span>kg diverted</span></div>
+        <div class="wheel-legend">@foreach(var item in Model.DiversionTotals){<div><i style="--p:@item.Percent%"></i><span>@item.Name</span><b>@pc(item.Value) @item.Unit</b></div>}</div>
+    </article>
+    <article class="food-waste-card wheel-card">
+        <div><h2>Meals produced</h2><p>Monthly total by tracker meal section.</p></div>
+        <div class="waste-wheel small" style="--segments:@wheel(Model.MealTotals)"><strong>@Model.Totals.TotalMeals.ToString("N0")</strong><span>meals</span></div>
+        <div class="wheel-legend">@foreach(var item in Model.MealTotals){<div><i style="--p:@item.Percent%"></i><span>@item.Name</span><b>@item.Value.ToString("N0")</b></div>}</div>
+    </article>
+</section>
+
+<section id="daily-entry" class="food-waste-card form-card-like">
+    <div class="form-title-row"><div><h2>Daily waste record and tracker submission</h2><p>Complete this once per unit per day. The fields mirror the F14a workstation form and the F14b tracker sections.</p>@if(Model.CurrentDraft is not null){<span class="draft-notice">Draft restored · last saved @Model.CurrentDraft.DraftSavedAtUtc?.ToLocalTime().ToString("dd MMM HH:mm")</span>}</div><span class="compliance-badge">Daily submission</span></div>
+    @if ((bool?)(ViewBag.TodaySubmitted) == true)
+    {
+        var submittedAt = ViewBag.TodaySubmittedAt as DateTime?;
+        <div class="submission-confirmed"><strong>✓ Today’s Food Waste record is submitted.</strong><span>@ViewBag.TodaySubmittedBy @if(submittedAt.HasValue){<text>· @submittedAt.Value.ToLocalTime().ToString("HH:mm")</text>}</span></div>
+    }
+    <form method="post" asp-action="Submit" class="waste-entry-form" data-draft-form="food-waste">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="selectedUnitCode" value="@Model.UnitCode" />
+        <input type="hidden" name="region" value="@Model.Region" />
+        <input type="hidden" name="month" value="@Model.Month.ToString("yyyy-MM-01")" />
+        <div class="waste-form-grid meta">
+            <label>Date<input asp-for="NewRecord.BusinessDate" name="BusinessDate" type="date" /></label>
+            <label>Unit Code<input name="UnitCode" value="@Model.NewRecord.UnitCode" readonly /></label>
+            <label>Unit Name<input name="UnitName" value="@Model.NewRecord.UnitName" readonly /></label>
+            <label>Workstation<input name="Workstation" value="@Model.NewRecord.Workstation" placeholder="Grill, deli, prep area..." /></label>
+            <label>Unit Manager<input name="UnitManager" value="@Model.NewRecord.UnitManager" /></label>
+            <label>Tare Weight (kg)<input name="TareWeightKg" type="number" step="0.01" min="0" value="@Model.NewRecord.TareWeightKg" /></label>
+        </div>
+        <h3>Food Waste Categories <span class="help-tip" title="These totals are calculated automatically from the workstation record lines below.">?</span></h3>
+        <p class="auto-summary-note">Automatic summary — enter each waste record once below and the correct category total will update automatically.</p>
+        <div class="waste-form-grid categories auto-waste-summary" aria-live="polite">
+            <label>Production Waste (kg)<input name="ProductionWasteKg" data-waste-total="PW" type="number" value="@Model.NewRecord.ProductionWasteKg" step="0.01" min="0" readonly /></label>
+            <label>Over Production Waste (kg)<input name="OverProductionWasteKg" data-waste-total="OPW" type="number" value="@Model.NewRecord.OverProductionWasteKg" step="0.01" min="0" readonly /></label>
+            <label>Unused / Expired (kg)<input name="UnusedExpiredKg" data-waste-total="UE" type="number" value="@Model.NewRecord.UnusedExpiredKg" step="0.01" min="0" readonly /></label>
+            <label>Plate Scrapings (kg)<input name="PlateScrapingsKg" data-waste-total="PS" type="number" value="@Model.NewRecord.PlateScrapingsKg" step="0.01" min="0" readonly /></label>
+            <label>Food Samples (kg)<input name="FoodSamplesKg" data-waste-total="FS" type="number" value="@Model.NewRecord.FoodSamplesKg" step="0.01" min="0" readonly /></label>
+        </div>
+        <h3>Workstation record lines</h3>
+        <div class="waste-line-table">
+            <div class="waste-line-head"><span>Type of Waste</span><span>Description</span><span>Weight (kg)</span><span>Employee Name</span></div>
+            @for(var i=0;i<5;i++)
+            {
+                var dl = i < Model.NewRecord.Lines.Count ? Model.NewRecord.Lines[i] : new FoodWasteLine();
+                <div class="waste-line-row">
+                    <select name="Lines[@i].TypeOfWaste"><option value="">Select</option><option value="PW" selected="@(dl.TypeOfWaste=="PW")">PW · Production Waste</option><option value="OPW" selected="@(dl.TypeOfWaste=="OPW")">OPW · Over Production Waste</option><option value="UE" selected="@(dl.TypeOfWaste=="UE")">UE · Unused / Expired</option><option value="PS" selected="@(dl.TypeOfWaste=="PS" || dl.TypeOfWaste=="Plate Scrapings")">PS · Plate Scrapings</option><option value="FS" selected="@(dl.TypeOfWaste=="FS" || dl.TypeOfWaste=="Food Samples")">FS · Food Samples</option></select>
+                    <input name="Lines[@i].Description" value="@dl.Description" placeholder="e.g. Pap, vegetable peels" />
+                    <input name="Lines[@i].WeightKg" value="@dl.WeightKg" type="number" step="0.01" min="0" />
+                    <input name="Lines[@i].EmployeeName" value="@dl.EmployeeName" placeholder="Employee name" />
+                </div>
+            }
+        </div>
+        <h3>Waste diversion, meals and used oil</h3>
+        <div class="waste-form-grid categories">
+            <label>Bokashi Waste (kg)<input name="BokashiWasteKg" type="number" value="@Model.NewRecord.BokashiWasteKg" step="0.01" min="0" /></label>
+            <label>Bio Bins (kg)<input name="BioBinsKg" type="number" value="@Model.NewRecord.BioBinsKg" step="0.01" min="0" /></label>
+            <label>Other Composting (kg)<input name="OtherCompostingKg" type="number" value="@Model.NewRecord.OtherCompostingKg" step="0.01" min="0" /></label>
+            <label>Other Method Name<input name="OtherCompostingMethod" value="@Model.NewRecord.OtherCompostingMethod" /></label>
+            <label>Main Dish Meals<input name="MainDishMeals" type="number" value="@Model.NewRecord.MainDishMeals" min="0" /></label>
+            <label>Urban Flavour Meals<input name="UrbanFlavourMeals" type="number" value="@Model.NewRecord.UrbanFlavourMeals" min="0" /></label>
+            <label>Chef's Signature Meals<input name="ChefsSignatureMeals" type="number" value="@Model.NewRecord.ChefsSignatureMeals" min="0" /></label>
+            <label>Veggie Meals<input name="VeggieMeals" type="number" value="@Model.NewRecord.VeggieMeals" min="0" /></label>
+            <label>Other Meals<input name="OtherMeals" type="number" value="@Model.NewRecord.OtherMeals" min="0" /></label>
+            <label>Function Meals<input name="FunctionMeals" type="number" value="@Model.NewRecord.FunctionMeals" min="0" /></label>
+            <label>Function Platters<input name="FunctionPlatters" type="number" value="@Model.NewRecord.FunctionPlatters" min="0" /></label>
+            <label>Used Oil Collection (L)<input name="UsedOilLitres" type="number" value="@Model.NewRecord.UsedOilLitres" step="0.01" min="0" /></label>
+            <label>Used Oil Supplier<input name="UsedOilSupplier" value="@Model.NewRecord.UsedOilSupplier" /></label>
+            <label class="check-label"><input name="HadFunction" type="checkbox" value="true" checked="@Model.NewRecord.HadFunction" /> Function held that day</label>
+        </div>
+        <label>Notes <span class="help-tip" title="Use notes for unusual waste, corrective actions, events or operational context.">?</span><textarea name="Notes" rows="3" placeholder="Any notes regarding today’s food waste?">@Model.NewRecord.Notes</textarea></label>
+        <div class="form-action-row"><button class="brand-button outline" type="submit" formaction="@Url.Action("SaveDraft","FoodWaste")">Save as draft</button><button class="brand-button primary" type="submit" formaction="@Url.Action("Submit","FoodWaste")">Submit daily waste record</button><small>Drafts do not count as compliance until submitted.</small></div>
+    </form>
+</section>
+
+<section class="food-waste-card">
+    <div class="form-title-row"><div><h2>Submitted records</h2><p>Latest daily records for the selected month and scope.</p></div></div>
+    <div class="waste-history-table">
+        <div class="waste-history-head"><span>Date</span><span>Unit</span><span>Food Waste</span><span>Diversion</span><span>Meals</span><span>Submitted by</span></div>
+        @foreach(var record in Model.Records.Take(40))
+        {
+            <div class="waste-history-row"><span>@record.BusinessDate.ToString("dd MMM")</span><span><b>@record.UnitCode</b><small>@record.UnitName</small></span><span>@pc(record.TotalFoodWasteKg) kg</span><span>@pc(record.TotalDiversionKg) kg</span><span>@record.TotalMeals.ToString("N0")</span><span>@record.SubmittedBy<br /><small>@record.SubmittedAtUtc.ToLocalTime().ToString("dd MMM HH:mm")</small></span></div>
+        }
+        @if(!Model.Records.Any()){<div class="empty-state">No food waste records have been submitted for this period yet.</div>}
+    </div>
+</section>
+
+
+<section id="champion" class="food-waste-card">
+  <div class="form-title-row"><div><span class="food-eyebrow">ACCOUNTABILITY</span><h2>Food Waste Champion & training register</h2><p>Record the appointed champion, backup and training evidence for this unit.</p></div><button type="button" class="brand-button outline no-print" onclick="window.print()">Print</button></div>
+  @if(string.IsNullOrWhiteSpace(Model.UnitCode)){<div class="empty-state">Select one unit above to maintain its champion and training register.</div>}else{
+  var profile=Model.WasteProfile ?? new UnitFoodWasteProfile{UnitCode=Model.UnitCode};
+  <form method="post" asp-action="SaveWasteProfile" class="waste-profile-form">
+    @Html.AntiForgeryToken()<input type="hidden" name="UnitCode" value="@Model.UnitCode"/><input type="hidden" name="returnUnitCode" value="@Model.UnitCode"/><input type="hidden" name="returnRegion" value="@Model.Region"/><input type="hidden" name="month" value="@Model.Month.ToString("yyyy-MM-01")"/>
+    <label>Food Waste Champion <span class="help-tip" title="PROC40 requires a Food Waste Champion per unit.">?</span><input name="ChampionName" value="@profile.ChampionName" required/></label>
+    <label>Champion email<input name="ChampionEmail" value="@profile.ChampionEmail" type="email"/></label>
+    <label>Backup person<input name="BackupName" value="@profile.BackupName"/></label>
+    <label>Training completed<input name="TrainingCompletedDate" type="date" value="@(profile.TrainingCompletedDate?.ToString("yyyy-MM-dd"))"/></label>
+    <label>Refresher due<input name="RefresherDueDate" type="date" value="@(profile.RefresherDueDate?.ToString("yyyy-MM-dd"))"/></label>
+    <label class="wide">Training evidence / notes<textarea name="TrainingEvidenceNotes" rows="2">@profile.TrainingEvidenceNotes</textarea></label>
+    <button class="brand-button primary">Save champion & training</button>
+  </form>}
+</section>
+
+<section id="reduction-plan" class="food-waste-card">
+  <div class="form-title-row"><div><span class="food-eyebrow">MONTHLY IMPROVEMENT</span><h2>Food Waste Reduction Plan</h2><p>Record the issue, root cause, action, owner, due date and evidence. Progress is retained for audit history.</p></div></div>
+  @if(string.IsNullOrWhiteSpace(Model.UnitCode)){<div class="empty-state">Select one unit above to create or review a reduction plan.</div>}else{
+  <form method="post" asp-action="SaveReductionPlan" class="reduction-plan-form">
+    @Html.AntiForgeryToken()<input type="hidden" name="UnitCode" value="@Model.UnitCode"/><input type="hidden" name="returnUnitCode" value="@Model.UnitCode"/><input type="hidden" name="returnRegion" value="@Model.Region"/><input type="hidden" name="month" value="@Model.Month.ToString("yyyy-MM-01")"/>
+    <label>Review month<input name="ReviewMonth" type="month" value="@Model.Month.ToString("yyyy-MM")"/></label><label>Issue / opportunity<input name="Issue" required placeholder="e.g. over-production at lunch"/></label><label>Root cause<input name="RootCause" placeholder="What is driving the waste?"/></label><label>Action<input name="Action" required placeholder="What will the unit change?"/></label><label>Owner<input name="Owner" placeholder="Responsible person"/></label><label>Due date<input name="DueDate" type="date" value="@DateTime.Today.AddDays(30).ToString("yyyy-MM-dd")"/></label><label>Status<select name="Status"><option>Open</option><option>In Progress</option><option>Closed</option></select></label><label>Progress %<input name="ProgressPercent" type="number" min="0" max="100" value="0"/></label><label class="wide">Evidence / outcome<textarea name="EvidenceNotes" rows="2" placeholder="What evidence shows improvement?"></textarea></label><button class="brand-button primary">Save reduction plan</button>
+  </form>
+  <div class="reduction-plan-history">@foreach(var plan in Model.ReductionPlans){<article><div><strong>@plan.ReviewMonth.ToString("MMM yyyy") · @plan.Issue</strong><small>@plan.RootCause</small></div><div class="plan-progress"><i><b style="width:@plan.ProgressPercent%"></b></i><span>@plan.ProgressPercent%</span></div><div><b>@plan.Status</b><small>@plan.Action · @plan.Owner · due @plan.DueDate.ToString("dd MMM")</small></div></article>}@if(!Model.ReductionPlans.Any()){<div class="empty-state">No reduction plans have been recorded for this unit yet.</div>}</div>}
+</section>
+
+<section id="audit-evidence" class="food-waste-card">
+  <div class="form-title-row"><div><span class="food-eyebrow">AUDIT EVIDENCE</span><h2>Food Waste support documents</h2><p>Keep used-oil certificates, training evidence, monthly reports and reduction-plan evidence with the unit record.</p></div></div>
+  @if(string.IsNullOrWhiteSpace(Model.UnitCode)){<div class="empty-state">Select one unit above to upload or view its evidence.</div>}else{
+  <form method="post" asp-action="UploadSupportDocument" enctype="multipart/form-data" class="support-upload-form no-print">
+    @Html.AntiForgeryToken()<input type="hidden" name="returnUnitCode" value="@Model.UnitCode"/><input type="hidden" name="returnRegion" value="@Model.Region"/><input type="hidden" name="documentMonth" value="@Model.Month.ToString("yyyy-MM-01")"/>
+    <label>Document type<select name="documentType"><option>Used Oil Certificate</option><option>Training Evidence</option><option>Monthly Waste Report</option><option>Reduction Plan Evidence</option><option>Other</option></select></label><label>File<input name="supportFile" type="file" accept=".pdf,.xlsx,.xls,.xlsm,.csv,.jpg,.jpeg,.png" required/></label><button class="brand-button primary">Upload evidence</button>
+  </form>
+  <div class="support-doc-list">@foreach(var d in Model.SupportDocuments){<a asp-action="DownloadSupportDocument" asp-route-id="@d.Id"><span><strong>@d.DocumentType</strong><small>@d.OriginalFileName</small></span><span>@d.UploadedBy<small>@d.UploadedAtUtc.ToLocalTime().ToString("dd MMM HH:mm")</small></span><b>Download →</b></a>}@if(!Model.SupportDocuments.Any()){<div class="empty-state">No support documents uploaded for @Model.Month.ToString("MMMM yyyy").</div>}</div>}
+</section>
+
+<script>
+(() => {
+  const form = document.querySelector('form[data-draft-form="food-waste"]');
+  if (!form) return;
+  const normalizeType = value => {
+    const v = (value || '').trim().toUpperCase();
+    if (v === 'PW' || v === 'PRODUCTION WASTE') return 'PW';
+    if (v === 'OPW' || v === 'OVER PRODUCTION WASTE') return 'OPW';
+    if (v === 'UE' || v === 'UNUSED/EXPIRED' || v === 'UNUSED / EXPIRED') return 'UE';
+    if (v === 'PS' || v === 'PLATE SCRAPINGS') return 'PS';
+    if (v === 'FS' || v === 'FOOD SAMPLES' || v === 'FOOD RETENTION SAMPLES') return 'FS';
+    return '';
+  };
+  const recalcWasteTotals = () => {
+    const totals = { PW:0, OPW:0, UE:0, PS:0, FS:0 };
+    form.querySelectorAll('.waste-line-row').forEach(row => {
+      const type = normalizeType(row.querySelector('select[name$=".TypeOfWaste"]')?.value);
+      const weight = parseFloat(row.querySelector('input[name$=".WeightKg"]')?.value || '0');
+      if (type && Number.isFinite(weight)) totals[type] += weight;
+    });
+    Object.entries(totals).forEach(([type,total]) => {
+      const field = form.querySelector(`[data-waste-total="${type}"]`);
+      if (field) field.value = total.toFixed(2);
+    });
+  };
+  form.addEventListener('input', event => {
+    if (event.target.matches('input[name$=".WeightKg"]')) recalcWasteTotals();
+  });
+  form.addEventListener('change', event => {
+    if (event.target.matches('select[name$=".TypeOfWaste"]')) recalcWasteTotals();
+  });
+  recalcWasteTotals();
+})();
+</script>

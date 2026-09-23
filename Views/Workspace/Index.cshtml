@@ -1,0 +1,28 @@
+@model WorkspaceDashboardViewModel
+@{ ViewData["Title"]="My Tasks"; }
+<section class="workspace-hero">
+  <div><span class="food-eyebrow">MY WORKSPACE</span><h1>Tasks, shortcuts and recent activity</h1><p>Everything that needs your attention, in one place.</p></div>
+  <form method="get" class="workspace-search"><input name="q" value="@Model.Query" placeholder="Search recipes, resale items, promotions or modules…" /><button class="brand-button primary">Search</button></form>
+</section>
+
+@if(!string.IsNullOrWhiteSpace(Model.Query))
+{
+<section class="workspace-card"><div class="workspace-card-head"><h2>Search results</h2><span>@Model.SearchResults.Count result(s)</span></div>
+<div class="global-search-results">@foreach(var r in Model.SearchResults){<a href="@r.Url"><span class="result-type">@r.Type</span><strong>@r.Title</strong><small>@r.Subtitle</small></a>}@if(!Model.SearchResults.Any()){<div class="empty-state">No matching items were found.</div>}</div></section>
+}
+
+<section class="workspace-grid">
+  <article class="workspace-card task-card"><div class="workspace-card-head"><h2>My Tasks</h2><span>@Model.Tasks.Count outstanding</span></div>
+  <div class="task-list">@foreach(var t in Model.Tasks){<a class="task-row @t.Severity.ToLowerInvariant()" href="@t.Url"><span class="task-dot"></span><span><strong>@t.Title</strong><small>@t.Module · @t.Detail</small></span>@if(t.DueDate.HasValue){<b>@t.DueDate.Value.ToString("dd MMM")</b>}else{<b>Open →</b>}</a>}@if(!Model.Tasks.Any()){<div class="empty-state good">✓ You’re all caught up.</div>}</div></article>
+  <article class="workspace-card"><div class="workspace-card-head"><h2>Quick actions</h2></div><div class="quick-action-grid"><a href="/FoodWaste#daily-entry"><b>♻</b><span>New waste entry</span></a><a href="/Operations/Reports#tieback"><b>▥</b><span>Upload tie-back</span></a><a href="/ResalePricing"><b>◇</b><span>Search resale price</span></a><a href="/Recipes"><b>♨</b><span>Find a recipe</span></a></div></article>
+</section>
+<section class="workspace-grid lower">
+ <article class="workspace-card"><div class="workspace-card-head"><h2>Favourites</h2><span>@Model.Favourites.Count saved</span></div><div class="favourite-list">@foreach(var f in Model.Favourites){<div><a href="@f.Url"><strong>@f.Name</strong><small>@f.EntityType</small></a><form method="post" asp-action="ToggleFavourite">@Html.AntiForgeryToken()<input type="hidden" name="entityType" value="@f.EntityType"/><input type="hidden" name="entityId" value="@f.EntityId"/><input type="hidden" name="name" value="@f.Name"/><input type="hidden" name="url" value="@f.Url"/><button title="Remove favourite">×</button></form></div>}@if(!Model.Favourites.Any()){<div class="empty-state">Save frequently used recipes and shortcuts here.</div>}</div></article>
+ <article class="workspace-card"><div class="workspace-card-head"><h2>Recently viewed</h2></div><div class="recent-list">@foreach(var a in Model.RecentActivity){<div><strong>@(string.IsNullOrWhiteSpace(a.EntityName)?a.Action:a.EntityName)</strong><small>@a.Action · @a.OccurredAtUtc.ToLocalTime().ToString("dd MMM HH:mm")</small></div>}@if(!Model.RecentActivity.Any()){<div class="empty-state">Your recent activity will appear here.</div>}</div></article>
+</section>
+@if(Model.IsAdministrator)
+{
+<section id="attention" class="workspace-card admin-attention"><div class="workspace-card-head"><div><span class="food-eyebrow">ADMINISTRATOR</span><h2>Units needing attention</h2></div><a asp-action="History">Open audit & change history →</a></div>
+<div class="attention-table"><div class="attention-head"><span>Unit</span><span>Region</span><span>Module</span><span>Issue</span><span>Status</span></div>@foreach(var a in Model.AttentionItems){<a class="attention-row" href="@a.Url"><span><b>@a.UnitCode</b><small>@a.UnitName</small></span><span>@a.Region</span><span>@a.Module</span><span>@a.Issue</span><span class="status-pill @a.Severity.ToLowerInvariant()">@a.Severity</span></a>}@if(!Model.AttentionItems.Any()){<div class="empty-state good">✓ No unit exceptions are currently flagged.</div>}</div>
+</section>
+}

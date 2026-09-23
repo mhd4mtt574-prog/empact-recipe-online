@@ -1,0 +1,164 @@
+[
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Beef & Vegetable Stew",
+    "Row": 17,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Cajun Short Rib",
+    "Row": 72,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Cajun Short Rib",
+    "Row": 75,
+    "OriginalProduct": "STOCK FROM TRAYS",
+    "SubstituteCode": "16781",
+    "SubstituteProduct": "STOCK BEEF GRANULES",
+    "Score": 0.479
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Savoury Mince",
+    "Row": 131,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Chakalaka Chuck",
+    "Row": 243,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Beef Liver",
+    "Row": 272,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Beef Sausage & Bean Casserole",
+    "Row": 297,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Beef Curry",
+    "Row": 545,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Beef Curry",
+    "Row": 550,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF",
+    "Recipe": "Italian Beef Bolognaise",
+    "Row": 573,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 2",
+    "Recipe": "Spiced Beef Short Rib",
+    "Row": 240,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 2",
+    "Recipe": "Beef Bolognaise 2",
+    "Row": 267,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 2",
+    "Recipe": "Beef Stir Fry",
+    "Row": 328,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 3",
+    "Recipe": "Romanian Beef Meatballs - Chiftele",
+    "Row": 52,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 3",
+    "Recipe": "Romanian Beef Meatballs - Chiftele",
+    "Row": 55,
+    "OriginalProduct": "SEE BELOW FOR SAUCE",
+    "SubstituteCode": "86112",
+    "SubstituteProduct": "SAUCE TOMATO",
+    "Score": "manual semantic match"
+  },
+  {
+    "Sheet": "BEEF 3",
+    "Recipe": "Romanian Beef Meatballs - Chiftele - SAUCE",
+    "Row": 76,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.583
+  },
+  {
+    "Sheet": "BEEF 3",
+    "Recipe": "Handmade Cornish Pastries",
+    "Row": 210,
+    "OriginalProduct": "cold water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": "manual semantic match"
+  },
+  {
+    "Sheet": "BEEF 3",
+    "Recipe": "Garlic & Thyme Grilled Prime Rib",
+    "Row": 273,
+    "OriginalProduct": "DRIPPINGS FROM PRIME RIB",
+    "SubstituteCode": "75832",
+    "SubstituteProduct": "BEEF PRIME RIB HALAAL",
+    "Score": 0.434
+  }
+]

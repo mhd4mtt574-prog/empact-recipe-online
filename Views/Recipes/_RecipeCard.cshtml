@@ -1,0 +1,12 @@
+@model Recipe
+<article class="recipe-card text-only-card">
+    <div class="recipe-accent"></div>
+    <div class="recipe-body">
+        <div class="recipe-card-topline"><span class="category-label">@Model.Category</span><span class="status @(Model.IsApproved?"approved":"draft")">@(Model.IsApproved ? "Approved" : "Draft")</span></div>
+        <h3><a asp-controller="Recipes" asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a></h3>
+        <p class="recipe-subtitle">@Model.Code <span>•</span> @Model.Unit</p>
+        <div class="recipe-stats"><div><small>Portions</small><strong>@Model.StandardPortions</strong></div><div><small>Cost / portion</small><strong>R @(Model.CostPerPortion.ToString("N2"))</strong></div><div><small>Version</small><strong>@Model.Version</strong></div></div>
+        <div class="chips">@if(Model.Allergens.Count==0){<span class="neutral-chip">No allergens recorded</span>}else{@foreach(var allergen in Model.Allergens.Take(3)){<span>@allergen</span>}}</div>
+        <div class="card-actions"><a class="card-link" asp-controller="Recipes" asp-action="Details" asp-route-id="@Model.Id">View recipe</a>@if(User.IsInRole("Administrator")){<a class="card-edit" asp-controller="Recipes" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>}</div>
+    </div>
+</article>

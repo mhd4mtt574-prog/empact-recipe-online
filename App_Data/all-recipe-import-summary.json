@@ -1,0 +1,3900 @@
+{
+  "ImportedRecipes": 242,
+  "ExistingRecipesRetained": 51,
+  "TotalSeedRecipes": 293,
+  "IngredientLines": 2198,
+  "Substitutions": 54,
+  "ByPrefix": {
+    "CHICKEN": 62,
+    "FISH": 9,
+    "LAMB": 5,
+    "PORK": 16,
+    "SALAD": 29,
+    "STARCH": 47,
+    "VEG": 74
+  },
+  "BySheet": {
+    "Chicken Recipes & Costings Jan 2024.xlsm :: Poultry 1": 24,
+    "Chicken Recipes & Costings Jan 2024.xlsm :: Poultry 2": 20,
+    "Chicken Recipes & Costings Jan 2024.xlsm :: Poultry 3": 14,
+    "Chicken Recipes & Costings Jan 2024.xlsm :: Poultry 4": 4,
+    "Fish Recipes & Costings Jan 2024.xlsm :: Fish": 9,
+    "Mutton & Lamb Recipes Costings Jan 2024.xlsm :: Mutton Lamb 1": 5,
+    "Pork Recipes & Costings Jan 2024.xlsm :: Pork 1": 16,
+    "Salad Costings Jan 2024.xlsm :: SALADS 80G 1": 25,
+    "Salad Costings Jan 2024.xlsm :: SALADS 80G 2": 4,
+    "Starch Recipes & Costings Jan 2024.xlsm :: Bread": 6,
+    "Starch Recipes & Costings Jan 2024.xlsm :: Grains": 7,
+    "Starch Recipes & Costings Jan 2024.xlsm :: Pasta": 9,
+    "Starch Recipes & Costings Jan 2024.xlsm :: Potato ": 12,
+    "Starch Recipes & Costings Jan 2024.xlsm :: Rice": 13,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: Veg - Salad": 12,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: Veg - Starch": 6,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: Vegetarian 1": 14,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: Vegetarian 2": 14,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: Vegetarian 3": 8,
+    "Vegetarian Recipes & Costings Jan 2024.xlsm :: veg": 20
+  },
+  "Skipped": [
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Poultry 4",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 59,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 87,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 311,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 339,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 367,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 395,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 423,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 451,
+      "Recipe": "Assorted Chicken",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 479,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 507,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Fish",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 3,
+      "Recipe": "Pickled Fish",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 31,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 59,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 87,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 115,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 143,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 171,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 143,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 171,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 199,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 227,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 255,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 283,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 311,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 339,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 367,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 395,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 423,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 451,
+      "Recipe": "Assorted Chicken",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 479,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 507,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "Mutton Lamb 1",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 3,
+      "Recipe": "Pickled Fish",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 31,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 59,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 87,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 115,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 143,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 171,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 451,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 479,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 507,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pork 1",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 3,
+      "Recipe": "Pickled Fish",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 31,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 59,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 87,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 115,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 143,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 171,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DIABETIC",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 115,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 143,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 171,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SALADS 80G 2",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "SOFT",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "DOCTORS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 3,
+      "Recipe": "RECIPE 1",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "STAFF",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Salad Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 199,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 227,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 255,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 283,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 311,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 339,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 367,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 395,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 423,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 451,
+      "Recipe": "Assorted Chicken",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 479,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 507,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Grains",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Rice",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Bread",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Potato ",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Potato ",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Potato ",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Pasta",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 3,
+      "Recipe": "Crumble",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 31,
+      "Recipe": "RECIPE 2",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 59,
+      "Recipe": "RECIPE 3",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 87,
+      "Recipe": "RECIPE 4",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 115,
+      "Recipe": "RECIPE 5",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 143,
+      "Recipe": "RECIPE 6",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "FUNCTIONS",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 395,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 423,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 451,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 479,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 507,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 1",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 423,
+      "Recipe": "RECIPE 16",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 451,
+      "Recipe": "RECIPE 17",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 479,
+      "Recipe": "RECIPE 18",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 507,
+      "Recipe": "RECIPE 19",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 2",
+      "Row": 535,
+      "Recipe": "RECIPE 20",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 227,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 255,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 283,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 311,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 339,
+      "Reason": "blank name or portions"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Vegetarian 3",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 171,
+      "Recipe": "RECIPE 7",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 199,
+      "Recipe": "RECIPE 8",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 227,
+      "Recipe": "RECIPE 9",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 255,
+      "Recipe": "RECIPE 10",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 283,
+      "Recipe": "RECIPE 11",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 311,
+      "Recipe": "RECIPE 12",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Starch",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Salad",
+      "Row": 339,
+      "Recipe": "RECIPE 13",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Salad",
+      "Row": 367,
+      "Recipe": "RECIPE 14",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "Veg - Salad",
+      "Row": 395,
+      "Recipe": "RECIPE 15",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "veg",
+      "Row": 563,
+      "Recipe": "RECIPE 21",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "veg",
+      "Row": 591,
+      "Recipe": "RECIPE 22",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "veg",
+      "Row": 619,
+      "Recipe": "RECIPE 23",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "veg",
+      "Row": 647,
+      "Recipe": "RECIPE 24",
+      "Reason": "no usable ingredients"
+    },
+    {
+      "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+      "Sheet": "veg",
+      "Row": 675,
+      "Recipe": "RECIPE 25",
+      "Reason": "no usable ingredients"
+    }
+  ]
+}

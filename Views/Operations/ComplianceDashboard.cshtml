@@ -1,0 +1,145 @@
+@model EmpactRecipeOnline.Models.ComplianceDashboardViewModel
+@{
+    ViewData["Title"] = "Compliance Dashboard";
+    string StatusClass(int score) => score >= 90 ? "good" : score >= 70 ? "warn" : "bad";
+    var worst = Model.UnitRows.Take(5).ToList();
+    var maxTrend = Math.Max(1, Model.Trend.Count == 0 ? 100 : Model.Trend.Max(x => x.Score));
+}
+
+<div class="compliance-heading illustrated-compliance-heading">
+    <div>
+        <div class="eyebrow">ADMINISTRATION · COMPLIANCE</div>
+        <h1>Compliance Dashboard</h1>
+        <p>Monitor compliance across modules, regions and individual units.</p>
+    </div>
+    <form method="get" class="compliance-filters" id="complianceFilters">
+        <label>Region
+            <select name="region" onchange="this.form.unitCode.value=''; this.form.submit()">
+                <option value="">All regions</option>
+                @foreach (var r in Model.Regions)
+                {
+                    <option value="@r" selected="@(Model.Region.Equals(r, StringComparison.OrdinalIgnoreCase))">@r</option>
+                }
+            </select>
+        </label>
+        <label>Unit
+            <select name="unitCode" onchange="this.form.submit()">
+                <option value="">All units in region</option>
+                @foreach (var u in Model.Units)
+                {
+                    <option value="@u.Code" selected="@(Model.UnitCode.Equals(u.Code, StringComparison.OrdinalIgnoreCase))">@u.Label</option>
+                }
+            </select>
+        </label>
+        <label>From<input type="date" name="from" value="@Model.From.ToString("yyyy-MM-dd")" /></label>
+        <label>To<input type="date" name="to" value="@Model.To.ToString("yyyy-MM-dd")" /></label>
+        <button class="button secondary" type="submit">Apply</button><button class="button secondary" type="button" onclick="window.print()">Print</button>
+    </form>
+</div>
+
+<div class="compliance-scope">Viewing: <strong>@Model.ScopeLabel</strong> · @Model.From.ToString("dd MMM yyyy") – @Model.To.ToString("dd MMM yyyy")</div>
+
+<section class="compliance-kpis">
+    <article><span class="kpi-icon good">✓</span><div><small>Overall compliance</small><strong>@Model.OverallCompliance%</strong><em>@Model.ScopeLabel</em></div></article>
+    <article><span class="kpi-icon good">⌂</span><div><small>Units compliant</small><strong>@Model.CompliantUnits</strong><em>90% or above</em></div></article>
+    <article><span class="kpi-icon warn">!</span><div><small>Units attention</small><strong>@Model.AttentionUnits</strong><em>70%–89%</em></div></article>
+    <article><span class="kpi-icon bad">△</span><div><small>Units outstanding</small><strong>@Model.OutstandingUnits</strong><em>Below 70%</em></div></article>
+    <article><span class="kpi-icon info">◷</span><div><small>Last activity</small><strong class="kpi-date">@(Model.LastActivityUtc?.ToLocalTime().ToString("dd MMM yyyy") ?? "No activity")</strong><em>@(Model.LastActivityUtc?.ToLocalTime().ToString("HH:mm") ?? "—")</em></div></article>
+</section>
+
+<section class="compliance-grid top">
+    <article class="compliance-card">
+        <div class="card-title"><h2>Compliance by module</h2><span>% compliance</span></div>
+        <div class="module-bars">
+            @foreach (var m in Model.ModuleScores)
+            {
+                <div class="module-row">
+                    <span>@m.Name</span>
+                    <div class="bar-track"><div class="bar-fill @StatusClass(m.Score)" style="width:@m.Score%"></div></div>
+                    <strong>@m.Score%</strong>
+                </div>
+            }
+        </div>
+    </article>
+
+    <article class="compliance-card donut-card">
+        <div class="card-title"><h2>Compliance status</h2><span>by units</span></div>
+        @{ var total = Math.Max(1, Model.UnitRows.Count); var goodPct = Model.CompliantUnits * 100m / total; var warnPct = Model.AttentionUnits * 100m / total; }
+        <div class="donut-wrap">
+            <div class="donut" style="background:conic-gradient(#00afbc 0 @goodPct%, #ffb700 @goodPct% @(goodPct+warnPct)%, #cf131e @(goodPct+warnPct)% 100%)">
+                <div><strong>@Model.UnitRows.Count</strong><span>Total units</span></div>
+            </div>
+            <div class="donut-legend">
+                <p><i class="legend good"></i><span>Compliant</span><strong>@Model.CompliantUnits</strong></p>
+                <p><i class="legend warn"></i><span>Attention</span><strong>@Model.AttentionUnits</strong></p>
+                <p><i class="legend bad"></i><span>Outstanding</span><strong>@Model.OutstandingUnits</strong></p>
+            </div>
+        </div>
+    </article>
+
+    <article class="compliance-card heatmap-card">
+        <div class="card-title"><h2>Compliance by module and unit</h2><span>@Model.ScopeLabel</span></div>
+        <div class="heatmap-scroll">
+            <table class="compliance-heatmap">
+                <thead><tr><th>Unit</th><th>Cat.</th><th>Resale</th><th>Recipes</th><th>Tie-back</th><th>Food Waste</th><th>Promotions</th><th>Overall</th></tr></thead>
+                <tbody>
+                @foreach (var row in Model.UnitRows.Take(12))
+                {
+                    <tr>
+                        <td><strong>@row.UnitCode</strong><small>@row.UnitName</small></td><td>@row.Category</td>
+                        <td class="@StatusClass(row.ResalePricing)">@row.ResalePricing%</td><td class="@StatusClass(row.RecipeCosting)">@row.RecipeCosting%</td>
+                        <td class="@StatusClass(row.ReportsTieBack)">@row.ReportsTieBack%</td>
+                        <td class="@StatusClass(row.FoodWaste)">@row.FoodWaste%</td>
+                        <td class="@StatusClass(row.Promotions)">@row.Promotions%</td>
+                        <td class="@StatusClass(row.Overall)"><strong>@row.Overall%</strong></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        @if (Model.UnitRows.Count > 12) { <div class="card-note">Showing 12 of @Model.UnitRows.Count units. Use the Region and Unit filters above to drill down.</div> }
+    </article>
+</section>
+
+<section class="compliance-grid bottom">
+    <article class="compliance-card attention-card">
+        <div class="card-title"><h2>Top units requiring attention</h2><span>lowest overall compliance</span></div>
+        @if (worst.Count == 0) { <div class="empty-state">No units in the selected scope.</div> }
+        else
+        {
+            <table class="attention-table">
+                <thead><tr><th>Unit</th><th>Region</th><th>Overall</th><th>Status</th><th>Highest outstanding module</th><th>Last activity</th></tr></thead>
+                <tbody>
+                @foreach (var row in worst)
+                {
+                    <tr><td><strong>@row.UnitCode</strong><small>@row.UnitName</small></td><td>@row.Region</td><td><b class="score-pill @StatusClass(row.Overall)">@row.Overall%</b></td><td>@row.Status</td><td>@row.HighestOutstandingModule</td><td>@(row.LastActivityUtc?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "No activity")</td></tr>
+                }
+                </tbody>
+            </table>
+        }
+    </article>
+
+    <article class="compliance-card trend-card">
+        <div class="card-title"><h2>Compliance trend</h2><span>last 6 months</span></div>
+        <div class="trend-chart">
+            @foreach (var p in Model.Trend)
+            {
+                <div class="trend-col"><strong>@p.Score%</strong><div class="trend-track"><div class="trend-bar @StatusClass(p.Score)" style="height:@p.Score%"></div></div><small>@p.Label</small></div>
+            }
+        </div>
+    </article>
+
+    <article class="compliance-card region-card">
+        <div class="card-title"><h2>Compliance by region</h2><span>current period</span></div>
+        <div class="region-bars">
+            @foreach (var r in Model.RegionScores)
+            {
+                <div class="region-row"><span><strong>@r.Region</strong><small>@r.Units units</small></span><div class="bar-track"><div class="bar-fill @StatusClass(r.Score)" style="width:@r.Score%"></div></div><b>@r.Score%</b></div>
+            }
+        </div>
+    </article>
+</section>
+
+<div class="compliance-method-note"><a class="brand-button outline no-print" href="/Workspace#attention">Open administrator attention queue</a>
+    <strong>How this dashboard measures compliance:</strong> it uses actual application activity and saved records for the selected period. Resale uses price-list access; recipe costing uses recipe/margin activity; tie-back uses weekday uploads; food waste combines daily tracker submissions (70%), Food Waste Champion/training readiness (15%) and the current monthly reduction plan (15%); promotions use recorded promotion activity. Allergens and recipe adjustments are not included in the compliance score.
+</div>

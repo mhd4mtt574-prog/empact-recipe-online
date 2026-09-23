@@ -1,0 +1,78 @@
+@{ ViewData["Title"]="Dashboard"; var recent=(List<Recipe>)ViewBag.Recent; var resalePreview=(List<ResaleCategoryPrice>)ViewBag.ResalePreview; var resaleCategory=(string)ViewBag.ResaleCategory; var myTasks=(List<WorkspaceTask>)ViewBag.MyTasks; var favourites=(List<UserFavourite>)ViewBag.Favourites; }
+<section class="food-page-hero dashboard-hero illustrated-hero">
+    <div>
+        <span class="food-eyebrow">FOOD BY EMPACT GROUP · RECIPE &amp; COSTING</span>
+        <h1>Welcome back, @User.Identity?.Name</h1>
+        <p>Everything your teams need to manage recipes, pricing and operational compliance in one place.</p>
+    </div>
+    <div class="food-ripple-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+</section>
+
+@if(User.IsInRole("Administrator") && (ViewBag.MissingTieBacks ?? 0) > 0){<a class="tieback-alert dashboard-alert" asp-controller="Operations" asp-action="Reports" asp-fragment="tieback">⚠ <strong>@ViewBag.MissingTieBacks unit(s)</strong> have not uploaded today’s tie-back sheet by 09:00. View daily tracking →</a>}
+
+<section class="brand-metric-grid">
+    <article class="brand-metric-card"><span class="brand-metric-icon turquoise">▤</span><div><small>Total recipes</small><strong>@ViewBag.RecipeCount</strong><p>Across all categories</p></div></article>
+    <article class="brand-metric-card"><span class="brand-metric-icon graphite">✓</span><div><small>Approved recipes</small><strong>@ViewBag.ApprovedCount</strong><p>Ready for unit use</p></div></article>
+    <article class="brand-metric-card"><span class="brand-metric-icon yellow">⚠</span><div><small>Supplier checks</small><strong>@ViewBag.AllergenReviewCount</strong><p>Need label verification</p></div></article>
+    <article class="brand-metric-card"><span class="brand-metric-icon turquoise">⌂</span><div><small>Your unit</small><strong class="unit-value">@User.FindFirst("unit")?.Value</strong><p>Current access scope</p></div></article>
+</section>
+
+<section class="dashboard-guidance-grid">
+  <article class="dashboard-task-panel">
+    <div class="panel-head"><div><span class="food-eyebrow">TODAY</span><h2>My Tasks</h2></div><a asp-controller="Workspace" asp-action="Index">View all →</a></div>
+    <div class="dashboard-task-list">@foreach(var t in myTasks){<a href="@t.Url" class="@t.Severity.ToLowerInvariant()"><span>●</span><div><strong>@t.Title</strong><small>@t.Module · @t.Detail</small></div></a>}@if(!myTasks.Any()){<div class="empty-state good">✓ Nothing outstanding right now.</div>}</div>
+  </article>
+  <article class="dashboard-quick-panel">
+    <div class="panel-head"><div><span class="food-eyebrow">SHORTCUTS</span><h2>Quick Actions</h2></div></div>
+    <div class="quick-action-grid"><a href="/FoodWaste#daily-entry"><b>♻</b><span>New waste entry</span></a><a href="/Operations/Reports#tieback"><b>▥</b><span>Upload tie-back</span></a><a href="/ResalePricing"><b>◇</b><span>Search resale price</span></a><a href="/Recipes"><b>♨</b><span>Find a recipe</span></a></div>
+    @if(favourites.Any()){<div class="mini-favourites"><small>Favourites</small>@foreach(var f in favourites){<a href="@f.Url">★ @f.Name</a>}</div>}
+  </article>
+</section>
+
+<section class="dashboard-feature-grid">
+    <article class="dashboard-feature-card resale-preview">
+        <div class="feature-heading"><div><span class="feature-icon">◇</span><div><h2>Resale Pricing</h2><p>Category @resaleCategory preview · current selling prices for point-of-sale updates.</p></div></div><a class="brand-button primary" asp-controller="ResalePricing" asp-action="Index">Open pricing →</a></div>
+        <div class="mini-price-table">
+            <div class="mini-price-head resale-preview-two"><span>Item</span><span>Selling Price</span></div>
+            @foreach(var item in resalePreview)
+            {
+                <div class="mini-price-row">
+                    <span><b>@item.ItemDescription</b><small>@item.ItemCode · @item.BrandCategorySize</small></span>
+                    <strong>R @item.SellingPrice.ToString("N2")</strong>
+                </div>
+            }
+        </div>
+    </article>
+
+
+    <article class="dashboard-feature-card food-waste-preview">
+        <div class="feature-heading"><div><span class="feature-icon">♻</span><div><h2>Food Waste</h2><p>Daily waste records, tracker submissions and monthly sustainability visibility.</p></div></div><a class="brand-button primary" asp-controller="FoodWaste" asp-action="Index">Open tracker →</a></div>
+        <div class="food-waste-preview-grid">
+            <div><small>Month to date waste</small><strong>@(((decimal)(ViewBag.FoodWasteTotalKg ?? 0m)).ToString("N1")) kg</strong></div>
+            <div><small>Waste diverted</small><strong>@(((decimal)(ViewBag.FoodWasteDiversionKg ?? 0m)).ToString("N1")) kg</strong></div>
+            <div><small>Meals tracked</small><strong>@(((int)(ViewBag.FoodWasteMeals ?? 0)).ToString("N0"))</strong></div>
+            <div><small>Daily submissions</small><strong>@ViewBag.FoodWasteSubmissions</strong></div>
+        </div>
+    </article>
+
+    @if(User.IsInRole("Administrator"))
+    {
+        <article class="dashboard-feature-card compliance-preview">
+            <div class="feature-heading"><div><span class="feature-icon">✓</span><div><h2>Administrator Compliance Dashboard</h2><p>Monitor unit activity, module compliance and areas requiring attention.</p></div></div><a class="brand-button outline" asp-controller="Operations" asp-action="ComplianceDashboard">Open dashboard</a></div>
+            <div class="compliance-preview-body">
+                <div class="preview-ring"><span>@ViewBag.ApprovedCount</span><small>approved recipes</small></div>
+                <div class="preview-bars"><div><span>Recipe standards</span><i><b style="width:88%"></b></i><strong>88%</strong></div><div><span>Allergen controls</span><i><b style="width:91%"></b></i><strong>91%</strong></div><div><span>Pricing activity</span><i><b style="width:94%"></b></i><strong>94%</strong></div></div>
+            </div>
+        </article>
+    }
+    else
+    {
+        <article class="dashboard-feature-card">
+            <div class="feature-heading"><div><span class="feature-icon">♨</span><div><h2>Recipe Library</h2><p>Find approved recipe standards, costs and operational information.</p></div></div><a class="brand-button outline" asp-controller="Recipes" asp-action="Index">Browse recipes</a></div>
+            <div class="dashboard-callout"><strong>Consistent standards, clearer costs.</strong><p>Use search and filters to get to the right recipe quickly.</p></div>
+        </article>
+    }
+</section>
+
+<div class="brand-section-heading"><div><span class="food-eyebrow">RECENT ACTIVITY</span><h2>Recently updated recipes</h2></div><a asp-controller="Recipes" asp-action="Index">View all recipes →</a></div>
+<div class="recipe-grid">@foreach(var item in recent){<partial name="_RecipeCard" model="item" />}</div>

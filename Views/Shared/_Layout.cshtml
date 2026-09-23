@@ -1,0 +1,86 @@
+@inject EmpactRecipeOnline.Services.WorkspaceService Workspace
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Food Recipe & Costing</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+@if (User.Identity?.IsAuthenticated == true)
+{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+    <div class="brand-shell">
+        <header class="brand-topbar no-print">
+            <div class="brand-topbar-inner">
+                <a class="food-wordmark" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/food-logo.png" alt="Food by Empact Group" />
+                    <span class="brand-product-name">Recipe &amp; Costing</span>
+                </a>
+                <button class="brand-menu-button" id="menuButton" type="button" aria-label="Open navigation">☰</button>
+                <nav class="brand-main-nav" id="brandNav" aria-label="Main navigation">
+                    <a class="@(controller=="Home"?"active":"")" asp-controller="Home" asp-action="Index"><span>⌂</span>Dashboard</a>
+                    @{ var taskCount = Workspace.GetTasks(User).Count; }
+                    <a class="@(controller=="Workspace" && action=="Index"?"active":"")" asp-controller="Workspace" asp-action="Index"><span>✓</span>My Tasks @if(taskCount>0){<b class="nav-task-badge">@taskCount</b>}</a>
+                    <a class="@(controller=="Recipes"?"active":"")" asp-controller="Recipes" asp-action="Index"><span>♨</span>Recipes</a>
+                    <a class="@(controller=="Promotions"?"active":"")" asp-controller="Promotions" asp-action="Index"><span>☆</span>Promotions</a>
+                    <a class="@(controller=="ResalePricing"?"active":"")" asp-controller="ResalePricing" asp-action="Index"><span>◇</span>Resale Pricing</a>
+                    <a class="@(controller=="FoodWaste"?"active":"")" asp-controller="FoodWaste" asp-action="Index"><span>♻</span>Food Waste</a>
+                    <a class="@(controller=="Operations" && action=="Reports"?"active":"")" asp-controller="Operations" asp-action="Reports"><span>▥</span>Reports &amp; Tie-back</a>
+                    @if(User.IsInRole("Administrator"))
+                    {
+                        <a class="@(controller=="Operations" && action=="ComplianceDashboard"?"active":"")" asp-controller="Operations" asp-action="ComplianceDashboard"><span>✓</span>Compliance</a>
+                        <details class="admin-menu" open="@(controller=="Operations" && action!="Reports" && action!="ComplianceDashboard" ? "open" : null)">
+                            <summary class="@(controller=="Operations" && action!="Reports"?"active":"")"><span>⚙</span>Admin <b>⌄</b></summary>
+                            <div class="admin-menu-panel">
+                                <a asp-controller="Operations" asp-action="Ingredients">Ingredients</a>
+                                <a asp-controller="Operations" asp-action="MenuAdjustments">Recipe adjustments</a>
+                                <a asp-controller="Operations" asp-action="Allergens">Allergens</a>
+                                <a asp-controller="Operations" asp-action="Checks">Recipe checks</a>
+                                <a asp-controller="Operations" asp-action="Units">Units</a>
+                                <a asp-controller="Operations" asp-action="Users">User Management</a>
+                                <a asp-controller="Workspace" asp-action="History">Audit &amp; change history</a>
+                                <a asp-controller="Operations" asp-action="Settings">Settings</a>
+                            </div>
+                        </details>
+                    }
+                    <form class="nav-logout-form" asp-controller="Account" asp-action="Logout" method="post">
+                        <button type="submit" class="nav-logout-button"><span>↪</span>Log out</button>
+                    </form>
+                </nav>
+                <form class="top-global-search" method="get" asp-controller="Workspace" asp-action="Index"><input name="q" aria-label="Global search" placeholder="Search app…" /><button title="Search">⌕</button></form>
+                <div class="brand-user-area">
+                    <div class="brand-user-copy">
+                        <strong>@User.Identity?.Name</strong>
+                        <small>@(User.IsInRole("Administrator") ? "Administrator" : (User.FindFirst("unit")?.Value ?? "Unit user"))</small>
+                    </div>
+                    <div class="brand-avatar">@((User.Identity?.Name ?? "U").Substring(0,1).ToUpper())</div>
+                    <form asp-controller="Account" asp-action="Logout" method="post"><button type="submit" title="Log out" class="top-signout"><span>↪</span><span class="top-signout-label">Log out</span></button></form>
+                </div>
+            </div>
+        </header>
+        <main class="brand-page">
+            @if (TempData["Success"] is string success) { <div class="flash success no-print">✓ @success</div> }
+            @if (TempData["Error"] is string error) { <div class="flash error no-print">⚠ @error</div> }
+            @if (TempData["Warning"] is string warning) { <div class="flash warning no-print">⚠ @warning</div> }
+            @RenderBody()
+        </main>
+    </div>
+}
+else
+{
+    <main>@RenderBody()</main>
+}
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+(function(){
+  const btn=document.getElementById('menuButton');
+  const nav=document.getElementById('brandNav');
+  if(btn&&nav){btn.addEventListener('click',()=>nav.classList.toggle('open'));}
+})();
+</script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

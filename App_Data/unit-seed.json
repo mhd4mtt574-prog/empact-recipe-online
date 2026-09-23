@@ -1,0 +1,2586 @@
+[
+  {
+    "UnitCode": "P0286",
+    "UnitName": "Pepkor Holdings Limited",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Hristina Muller",
+    "Email": "WSCTN.PEP@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0442",
+    "UnitName": "Stellenbosch Academy of Sport",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Kristian Ras",
+    "Email": "catering@sastraining.co.za"
+  },
+  {
+    "UnitCode": "S0456",
+    "UnitName": "Stellenbosch Academy of Sport - Man Fee",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Kristian Ras",
+    "Email": "catering@sastraining.co.za"
+  },
+  {
+    "UnitCode": "W0147",
+    "UnitName": "WNS South Africa Pty Ltd",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Morne Jordaan",
+    "Email": "WSCTN.WNS@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0151",
+    "UnitName": "WNS Global Service SA - Belleville",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Morne Jordaan",
+    "Email": "WSCTN.WNS@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0152",
+    "UnitName": "WNS Global Service SA - Claremont",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Morne Jordaan",
+    "Email": "WSCTN.WNS@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0154",
+    "UnitName": "Western Province Blood Service",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Tercia Jackson",
+    "Email": "WSCTN.WCBlood@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0197",
+    "UnitName": "Appletiser",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Raoul Hughes",
+    "Email": "wsctn.appletiser@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0512",
+    "UnitName": "CTP Limited Cape Town",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Rowena Cloete",
+    "Email": "WSCTN.CTPPrinters@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0527",
+    "UnitName": "Capitec Bank",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Michelle de Lacey",
+    "Email": "WSCTN.CapitecHO@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0128",
+    "UnitName": "GlaxoSmithKline",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Kamielah Burricks",
+    "Email": "Wsctn.GSK@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0147",
+    "UnitName": "Indigo Brands",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Joresa Bruwer",
+    "Email": "wsctn.indigo@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0063",
+    "UnitName": "Rainbow Farm (Pty) Ltd - JHB",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Shamoodah Anthony",
+    "Email": "wsctn.rainbow@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0517",
+    "UnitName": "Southern Sun de Wagen",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "No manager",
+    "Email": "No Mail"
+  },
+  {
+    "UnitCode": "V0073",
+    "UnitName": "Vector Logistics",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alley Makibi",
+    "Email": "wsctn.vector@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0191",
+    "UnitName": "Discovery Healthcare - Cape Town",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Andrea Haupt",
+    "Email": "WSCTN.DiscoveryMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0277",
+    "UnitName": "New Clicks South Africa (Pty) Ltd",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Beryl Visser",
+    "Email": "WSCTN.Clicks@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0308",
+    "UnitName": "New Clicks Coffee Shop",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Beryl Visser",
+    "Email": "WSCTN.Clicks@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0144",
+    "UnitName": "I&J - Deli Woodstock",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Jacques Riley",
+    "Email": "Jacques.Riley@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0357",
+    "UnitName": "Massmart Cape Town",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Julene September",
+    "Email": "WSCTN.MassmartBrakengate@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0228",
+    "UnitName": "Alta Du Toit",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Isabel Snyman",
+    "Email": "WSCTN.AltaduToit@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0011",
+    "UnitName": "Booth Memorial Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Natasha Dreyer",
+    "Email": "wsctn.booth@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0141",
+    "UnitName": "Life HC West Coast",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Hester Titus",
+    "Email": "WSCTN.LifeWestCoast@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0157",
+    "UnitName": "Life Renal Care Cape Town",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "N/A",
+    "Email": "N/A"
+  },
+  {
+    "UnitCode": "M0344",
+    "UnitName": "Mediclinic (Pty) Ltd",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Shane Gosling",
+    "Email": "WSCTN.MediclinicCorp@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0237",
+    "UnitName": "Netcare Blaauwberg Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Porchio van der Burg",
+    "Email": "Wsctn.NetcareBlaauwberg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0238",
+    "UnitName": "Netcare Christiaan Barnard",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Calvyn Potgieter",
+    "Email": "WSCTN.NetcareCBManager@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0239",
+    "UnitName": "Netcare Kuilsriver Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Taneal Terblanche",
+    "Email": "Wsctn.NetcareKuilsriver@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0240",
+    "UnitName": "Netcare N1 City Hosp",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lizelle Swart",
+    "Email": "Wsctn.NetcareN1city@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0241",
+    "UnitName": "Netcare UCT Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Tertia Solomon",
+    "Email": "Wsctn.NetcareUCT@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0099",
+    "UnitName": "Netcare Blaauwberg Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Porchio van der Burg",
+    "Email": "Wsctn.NetcareBlaauwberg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0101",
+    "UnitName": "Netcare Christiaan Barnard Ward Hostessi",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Calvyn Potgieter",
+    "Email": "WSCTN.NetcareCBManager@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0112",
+    "UnitName": "Netcare Kuilsriver Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Taneal Terblanche",
+    "Email": "Wsctn.NetcareKuilsriver@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0120",
+    "UnitName": "Netcare N1 City Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lizelle Swart",
+    "Email": "Wsctn.NetcareN1city@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0139",
+    "UnitName": "Netcare UCT Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Tertia Solomon",
+    "Email": "Wsctn.NetcareUCT@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0018",
+    "UnitName": "I&J Forest Lily",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0020",
+    "UnitName": "I&J Stevia",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0026",
+    "UnitName": "I&J Flame Thorn",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0028",
+    "UnitName": "I&J - Baronia",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0029",
+    "UnitName": "I&J - Trawling",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0032",
+    "UnitName": "I&J - Paarden Eiland",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Jacques Riley",
+    "Email": "Jacques.Riley@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0033",
+    "UnitName": "I&J - Fish Process",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Jacques Riley",
+    "Email": "Jacques.Riley@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0050",
+    "UnitName": "I&J Fucia",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0068",
+    "UnitName": "I&J Freezia",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0083",
+    "UnitName": "I&J Blue Bell",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0099",
+    "UnitName": "I&J Fox Glove",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0137",
+    "UnitName": "I&J Trawling Avro Warrior",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0139",
+    "UnitName": "I&J - Umlobi",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0140",
+    "UnitName": "I & J Waterfront",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Jacques Riley",
+    "Email": "Jacques.Riley@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0141",
+    "UnitName": "I&J - Ferox",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Shandre Daniels",
+    "Email": "Empact.INJtrawlingMgr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0216",
+    "UnitName": "Deloitte The Ridge CPT",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "",
+    "Email": ""
+  },
+  {
+    "UnitCode": "N0297",
+    "UnitName": "Norton Rose - Cape",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "",
+    "Email": ""
+  },
+  {
+    "UnitCode": "P0231",
+    "UnitName": "Price Waterhouse Coopers - CTN",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Liezel Buytendag",
+    "Email": "liezel.buytendag@pwc.com"
+  },
+  {
+    "UnitCode": "T0140",
+    "UnitName": "Truworths",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Yolande Gething",
+    "Email": "yolande.gething@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0280",
+    "UnitName": "Amazon PK",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Conre van der Westhuizen",
+    "Email": "conre.vdwesthuizen@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0162",
+    "UnitName": "Telesure Grp Vending",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "No Manager on site - Vending unit",
+    "Email": ""
+  },
+  {
+    "UnitCode": "V0119",
+    "UnitName": "Vodacom Century City",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Vikki Thunissen",
+    "Email": "Vikki.Thunisse@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0127",
+    "UnitName": "Vodacom Tecno Centre",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Harriet Kiewiets",
+    "Email": "WSCTN.VodaTechnoCentre@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0140",
+    "UnitName": "De Beers Supply Chain",
+    "Region": "Cape Town",
+    "Sector": "Off-Shore",
+    "ContactPerson": "Andre Snyganz",
+    "Email": "Andre.Snyganz@debeersgroup.com"
+  },
+  {
+    "UnitCode": "P0284",
+    "UnitName": "Pingo Delivery (Pty) Ltd",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LYDIA JANSE VAN RENSBURG",
+    "Email": "lydia.jansevanrensburg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0488",
+    "UnitName": "Sanlam Glacier Palace",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LYDIA JANSE VAN RENSBURG",
+    "Email": "lydia.jansevanrensburg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0489",
+    "UnitName": "Sanlam HO Bellville",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "ANNAMI LAMBRECHTS",
+    "Email": "annami.lambrechts@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0490",
+    "UnitName": "Santam HO Bellville",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LYDIA JANSE VAN RENSBURG",
+    "Email": "lydia.jansevanrensburg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0491",
+    "UnitName": "Sanlam HO Retail",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LYDIA JANSE VAN RENSBURG",
+    "Email": "lydia.jansevanrensburg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "Y0002",
+    "UnitName": "Yum Junction Cafe",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LYDIA JANSE VAN RENSBURG",
+    "Email": "lydia.jansevanrensburg@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0198",
+    "UnitName": "Discovery PE",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Dirk Haarhof",
+    "Email": "Wspe.Discovery@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0115",
+    "UnitName": "Vodacom Acres PE",
+    "Region": "Cape Town",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Cindy Roberts",
+    "Email": "WSPE.VodaAcers@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0180",
+    "UnitName": "Abedare Cables",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Heidi De La Harpe",
+    "Email": "wspe.aberdarecables@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "F0087",
+    "UnitName": "Fresenius Kabi Manufacturing",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Koleka Mabeqa (Swapi)",
+    "Email": "WSPE.FreseniusKabi@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0134",
+    "UnitName": "Goodyear SA",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Shobana Rubbinunan",
+    "Email": "WSPE.GoodyearSA@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0108",
+    "UnitName": "REHAU Uitenhage",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "",
+    "Email": "WSPE.RehauPolymer@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0141",
+    "UnitName": "Volkswagen of South Africa",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alanna Dames",
+    "Email": "Alanna.Dames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0144",
+    "UnitName": "VW Vending",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alanna Dames",
+    "Email": "Alanna.Dames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0146",
+    "UnitName": "VW Roosters",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alanna Dames",
+    "Email": "Alanna.Dames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0147",
+    "UnitName": "VW Assembly",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alanna Dames",
+    "Email": "Alanna.Dames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0148",
+    "UnitName": "VW Press Shop",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Alanna Dames",
+    "Email": "Alanna.Dames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0093",
+    "UnitName": "Weir HBF Pty Ltd - PE",
+    "Region": "Cape Town",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Siphokazi Nkulana",
+    "Email": "WSPE.Weir@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0274",
+    "UnitName": "Akeso Port Elizabeth",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Fiona Koopman",
+    "Email": "WSPE.AkesoGqeberha@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0139",
+    "UnitName": "ECHO Foundation",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Penelope Main (Human)",
+    "Email": "WSPE.ECHOFoundation@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0141",
+    "UnitName": "ECHO Foundation",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Penelope Main (Human)",
+    "Email": "WSPE.ECHOFoundation@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "H0150",
+    "UnitName": "Hunters Craig Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Nomsa Vuma",
+    "Email": "wspe.hunterscraig@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0152",
+    "UnitName": "Life Isivivana Private Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lynette Geswindt",
+    "Email": "WSPE.LifeIsivivana@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0166",
+    "UnitName": "Life Renal Ecco PE",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Penelope Main (Human)",
+    "Email": "WSPE.ECHOFoundation@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0171",
+    "UnitName": "Life Kirkwood",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Maxwell Mdaniso",
+    "Email": "WSPE.LifeKirkwood@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0235",
+    "UnitName": "Netcare Greenacres Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Dianne Botes",
+    "Email": "Wspe.NetcareGreenacres@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0236",
+    "UnitName": "Netcare Cuyler Hospital",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lewen Jantjies",
+    "Email": "Wspe.NetcareCuyler@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0300",
+    "UnitName": "Greenacres Staff Dining",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Dianne Botes",
+    "Email": "Wspe.NetcareGreenacres@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0103",
+    "UnitName": "Netcare Cuyler Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lewen Jantjies",
+    "Email": "Wspe.NetcareCuyler@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0107",
+    "UnitName": "Netcare Greenacres Ward Hostessing",
+    "Region": "Cape Town",
+    "Sector": "Food-Health",
+    "ContactPerson": "Dianne Botes",
+    "Email": "Wspe.NetcareGreenacres@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0067",
+    "UnitName": "Volvo Truck Industries",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Mandisa Sibiya",
+    "Email": "wskzn.volvo@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "O0050",
+    "UnitName": "Ogihara SA",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Ronwyn Gregory",
+    "Email": "wskzn.ogiharasa@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0060",
+    "UnitName": "Rainbow Farms (Pty) Ltd - Main",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Evelyn Rodway",
+    "Email": "evelyn.rodway@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0094",
+    "UnitName": "Rainbow Practitrade",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Leon Hodge",
+    "Email": "wskzn.rainbowncs@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0526",
+    "UnitName": "SAB Prospecton Brewery",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Rajen Govender",
+    "Email": "wskzn.sabprospecton@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0117",
+    "UnitName": "Toyota Tshusho",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Vilaine Govender",
+    "Email": "wskzn.toyotatusho@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "U0163",
+    "UnitName": "Unilvever Warehouse",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Lungelo Shandu",
+    "Email": "wskzn.unilveverpmb@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0003",
+    "UnitName": "Applebosch Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Phelelani Ngcemu",
+    "Email": "wskzn.applebosch@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0010",
+    "UnitName": "Edendale Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Sanelisiwe Mlumbi",
+    "Email": "sanelisiwe.mlumbi@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0005",
+    "UnitName": "Greys Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Mbali Motsoeneng",
+    "Email": "mbali.motsoeneng@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0117",
+    "UnitName": "Greys Hospital Sub-Debtor",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Mbali Motsoeneng",
+    "Email": "mbali.motsoeneng@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0017",
+    "UnitName": "Montebello Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Thabani Xolo",
+    "Email": "wskzn.montebello@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "U0001",
+    "UnitName": "Umpumulu Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Thenjiwe Ndlovu",
+    "Email": "wskzn.umpumulu@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "U0002",
+    "UnitName": "Untanjambili Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Pinky Bhengu",
+    "Email": "wskzn.untanjambili@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0188",
+    "UnitName": "Discovery Healthcare - KZN",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Priya Persad",
+    "Email": "Priya.Persad@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0350",
+    "UnitName": "Mpact Felixton Mill",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Siphokazi Pakkies",
+    "Email": "WSKZN.MpactFelixton@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0299",
+    "UnitName": "National Bioproducts Institute",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Zikhona Dlamini",
+    "Email": "wskzn.nbisa@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0350",
+    "UnitName": "Bell Equipment Company SA (Pty) Ltd",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Snethemba Khanyi",
+    "Email": "WSKZN.Bell@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0517",
+    "UnitName": "CCBSA Premier Manufacturing Gate 1",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Andile Cele",
+    "Email": "WSKZN.CCBSAPremierr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0518",
+    "UnitName": "CCBSA Phoenix Manufacturing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Karnan Munsammy",
+    "Email": "WSKZN.CCBSAPhoenix@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "K0094",
+    "UnitName": "King Edward V111 Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Cindy Verwey",
+    "Email": "Cindy.Verwey@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "K0096",
+    "UnitName": "King Edward Hospital - Sub-Debtor",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Cindy Verwey",
+    "Email": "Cindy.Verwey@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0160",
+    "UnitName": "Life Renal Care Newcastle",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Sibusiso Sibeko",
+    "Email": "WSKZN.MediclinicNCAdmin@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0351",
+    "UnitName": "Mediclinic Newcastle",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Sibusiso Sibeko",
+    "Email": "WSKZN.MediclinicNCAdmin@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0352",
+    "UnitName": "Mediclinic Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Thobile Ngobeni",
+    "Email": "WSKZN.MediclinicNCCoffee@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0015",
+    "UnitName": "St Marys Hospital Melmoth",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Zinhle Nsele",
+    "Email": "wskzn.stmarys@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0179",
+    "UnitName": "St Aidans Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Kerry Le Grant",
+    "Email": "wskzn.staidans@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0005",
+    "UnitName": "Wentworth Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Shantell Innes",
+    "Email": "wskzn.wentworth@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0071",
+    "UnitName": "Wentworth Hospital - Sub-Debtor",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Shantell Innes",
+    "Email": "wskzn.wentworth@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0292",
+    "UnitName": "Netcare Umhlanga Staff Dining",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Megan Gibbens",
+    "Email": "WSKZN.NetcareUmhlanga2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0234",
+    "UnitName": "Akeso Clinic Umhlanga",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Niri Singh",
+    "Email": "wskzn.Akesoumhlanga@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0235",
+    "UnitName": "Akeso Clinic PMB",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Joanne Anthony",
+    "Email": "WSKZN.AkesoPMB@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0238",
+    "UnitName": "Akeso PMB Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Joanne Anthony",
+    "Email": "WSKZN.AkesoPMB@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0239",
+    "UnitName": "Akeso Umhlanga Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Niri Singh",
+    "Email": "wskzn.Akesoumhlanga@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0265",
+    "UnitName": "Akeso Richards Bay",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Phillisiwe Xaba",
+    "Email": "wskzn.AkesoRichardsBay@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "K0112",
+    "UnitName": "Kokstad Private Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Mercy Lynx",
+    "Email": "wskzn.Kokstadph@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "K0113",
+    "UnitName": "Kokstad Hospital Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Mercy Lynx",
+    "Email": "wskzn.Kokstadph@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0159",
+    "UnitName": "Life Renal Care Richards Bay",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Farheen Ally",
+    "Email": "WSKZN.NetcareTheBay@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0161",
+    "UnitName": "Life Renal Care Ballito",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Gordon Ndawonde",
+    "Email": "WSKZN.NetcareAlberlito@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0168",
+    "UnitName": "Life Renal Kokstad",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Mercy Lynx",
+    "Email": "wskzn.Kokstadph@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0329",
+    "UnitName": "Medicross Hillcrest Sub-Acute",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "John Murch",
+    "Email": "WSKZN.MedicrossHillcrest@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0334",
+    "UnitName": "Medicross Richardsbay",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Farheen Ally",
+    "Email": "WSKZN.NetcareTheBay@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0242",
+    "UnitName": "Alberlito Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Gordon Ndawonde",
+    "Email": "WSKZN.NetcareAlberlito@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0243",
+    "UnitName": "Netcare Kingsway Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Vinotha Naidoo",
+    "Email": "WSKZN.NetcareKingsway@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0244",
+    "UnitName": "Netcare Parklands Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Nevashnee Naidoo",
+    "Email": "WSKZN.parklands@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0245",
+    "UnitName": "Netcare St Anne's Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Tezna Fredricks",
+    "Email": "WSKZN.NetcareStAnne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0246",
+    "UnitName": "Netcare St Augustine's Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Grant Dewey (PM)\nRowanne Govender (CM)",
+    "Email": "WSKZN.NetcareStAugustine2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0247",
+    "UnitName": "Netcare Margate Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Owen Larsen",
+    "Email": "WSKZN.NetcareMargate@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0248",
+    "UnitName": "Netcare The Bay Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Farheen Ally",
+    "Email": "WSKZN.NetcareTheBay@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0249",
+    "UnitName": "Netcare Umhlanga Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Megan Gibbens",
+    "Email": "WSKZN.NetcareUmhlanga2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0280",
+    "UnitName": "Netcare Umhlanga Eye Institute",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Megan Gibbens",
+    "Email": "WSKZN.NetcareUmhlanga2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0097",
+    "UnitName": "Netcare Alberlito Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Gordon Ndawonde",
+    "Email": "WSKZN.NetcareAlberlito@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0109",
+    "UnitName": "Netcare Kingsway Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Vinotha Naidoo",
+    "Email": "WSKZN.NetcareKingsway@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0115",
+    "UnitName": "Netcare Margate Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Owen Larsen",
+    "Email": "WSKZN.NetcareMargate@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0124",
+    "UnitName": "Netcare Parklands Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Nevashnee Naidoo",
+    "Email": "WSKZN.parklands@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0134",
+    "UnitName": "Netcare St Anne's Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Tezna Fredricks",
+    "Email": "WSKZN.NetcareStAnne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0135",
+    "UnitName": "Netcare St Augustines Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Grant Dewey (PM)\nRowanne Govender (CM)",
+    "Email": "WSKZN.NetcareStAugustine2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0138",
+    "UnitName": "Netcare The Bay Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Farheen Ally",
+    "Email": "WSKZN.NetcareTheBay@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0140",
+    "UnitName": "Netcare Umhlanga Ward Hostessing",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Megan Gibbens",
+    "Email": "WSKZN.NetcareUmhlanga2@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0454",
+    "UnitName": "Sappi Saiccor",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Steven Pillay",
+    "Email": "WSKZN.sappisaicor@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0516",
+    "UnitName": "Cato Ridge Pvt Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Angel Koloko",
+    "Email": "WSKZN.CatoRidgeHosp@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0079",
+    "UnitName": "Entabeni Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Faheema Cassim",
+    "Email": "Faheema.cassim@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0136",
+    "UnitName": "Glenmarks Clinic",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Selwyn Govender",
+    "Email": "wskzn.glenmarks@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0113",
+    "UnitName": "St Joseph Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Diyaksha Algoo",
+    "Email": "WSKZN.stjosephshospital@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0127",
+    "UnitName": "Life Chatsmed Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Kelene Govender",
+    "Email": "WSKZN.LifeChatsmed@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0128",
+    "UnitName": "Life Mount Edgecombe Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Eugene Callaghan-PM",
+    "Email": "Eugene.callaghan@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0129",
+    "UnitName": "Life Westville Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Dawid Verwey -PM",
+    "Email": "Dawid.verwy@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0130",
+    "UnitName": "Life Chatsmed Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Kelene Govender",
+    "Email": "WSKZN.LifeChatsmed@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0131",
+    "UnitName": "Life Mount Edgecombe Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Eugene Callaghan-PM",
+    "Email": "Eugene.callaghan@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0158",
+    "UnitName": "Life Renal Care Durban",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Faheema Cassim",
+    "Email": "Faheema.cassim@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0514",
+    "UnitName": "Kearsney Vending",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Educ",
+    "ContactPerson": "Justin De Beer",
+    "Email": "justin.debeer@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "K0087",
+    "UnitName": "Kearsney college",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Educ",
+    "ContactPerson": "Justin De Beer",
+    "Email": "justin.debeer@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0223",
+    "UnitName": "Deloitte Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Zubaida Ebrahim",
+    "Email": "Shiraaz.khan@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0140",
+    "UnitName": "Empact Functions",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Shiraaz Khan",
+    "Email": "Shiraaz.khan@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0142",
+    "UnitName": "Empact KZN Office Vending",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Shiraaz Khan",
+    "Email": "Shiraaz.khan@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "G0132",
+    "UnitName": "Grindrod SA",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Tabassum Rahim",
+    "Email": "wskzn.grindrod@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0298",
+    "UnitName": "Norton Rose - Durban",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Noma Gumede",
+    "Email": "wskzn.nortonrosefulbright@emapctgroup.co.za"
+  },
+  {
+    "UnitCode": "P0267",
+    "UnitName": "PWC Umhlanga",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Thaven Naidu",
+    "Email": "wskzn.pwc@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0487",
+    "UnitName": "Sanlam Durban",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Kerusha Angappa",
+    "Email": "wskzn.sanlam@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0519",
+    "UnitName": "SA Home Loans",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Clarissa Rohan",
+    "Email": "wskzn.sahomeloans@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0156",
+    "UnitName": "Telesure Group Services KZN",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Zubaida Ebrahim",
+    "Email": "zubaida.ebrahim@emapctgroup.co.za"
+  },
+  {
+    "UnitCode": "V0121",
+    "UnitName": "Vodacom Kzn",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Nahima Hossen",
+    "Email": "wskzn.voda@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0153",
+    "UnitName": "WNS Global Services",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Tembilihle Zulu",
+    "Email": "wskzn.wns@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0356",
+    "UnitName": "Massmart Durban North",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Chantal Johnson",
+    "Email": "wskzn.massmart@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0004",
+    "UnitName": "National Brands (Pty) Ltd - KZN",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Noel Masondo",
+    "Email": "wskzn.nationalb@empactgreoup.co.za"
+  },
+  {
+    "UnitCode": "T0168",
+    "UnitName": "The Unlimited",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Shiraaz Khan",
+    "Email": "wskzn.theunlimited@emapctgroup.co.za"
+  },
+  {
+    "UnitCode": "V0145",
+    "UnitName": "Vector Logistics (Pty) Ltd",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Shiraaz Khan",
+    "Email": "wskzn.vectorlog@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0255",
+    "UnitName": "Ahmed Al Kadi Private Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Yasmin Arran",
+    "Email": "wskzn.ahmedalkadihospital@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0260",
+    "UnitName": "Ahmed Al Kadi Private Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Yasmin Arran",
+    "Email": "wskzn.ahmedalkadihospital@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0359",
+    "UnitName": "Mercedes-Benz South Africa",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Zuki Booi",
+    "Email": "Zukiswa.Booi@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0362",
+    "UnitName": "Mercedes-Benz Functions",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Gaddafi Cezula",
+    "Email": "WSEL.MBSAFunctions@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0363",
+    "UnitName": "MBSA Paintshop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Nomnqweno Msadu",
+    "Email": "WSEL.MBSAF10@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0364",
+    "UnitName": "MBSA - M1",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Cwayita Moyi",
+    "Email": "WSEL.MBSAM1@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0365",
+    "UnitName": "MBLA",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Nontlalontle Mjayezi",
+    "Email": "WSEL.MBSALA@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0366",
+    "UnitName": "MBSA - C1",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Brennon Cope",
+    "Email": "WSEL.MBSAC1@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0367",
+    "UnitName": "MBSA - CVZ",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Noluvo Mandela",
+    "Email": "WSEL.MBSACVZ@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0368",
+    "UnitName": "MBSA Paintshop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Zanele Gomana",
+    "Email": "WSEL.MBSAPaintshop@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0107",
+    "UnitName": "REHAU Fort Jackson",
+    "Region": "KwaZulu-Natal",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Lexi Maswana",
+    "Email": "WSEL.rehaupolymer@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0200",
+    "UnitName": "Border Rehabilitation",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Jeantelle Pretorius",
+    "Email": "wsel.lifeborderrehab@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0149",
+    "UnitName": "Life HC Queenstown Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Amangile Nkunkuma",
+    "Email": "WSEL.lifequeenstown@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0154",
+    "UnitName": "Life HC Queenstown Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Amangile Nkunkuma",
+    "Email": "WSEL.lifequeenstown@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0116",
+    "UnitName": "Royal Buffalo Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Vasi Beharee",
+    "Email": "WSEL.RoyalBuffalo@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0044",
+    "UnitName": "St Dominics Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lumka Hlwati",
+    "Email": "Lumka.Hlwati@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0283",
+    "UnitName": "St Marks Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Rumana Obaray",
+    "Email": "wsel.stmarksclinic@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0298",
+    "UnitName": "St Dominics Coffee Shop",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Renee Govender",
+    "Email": "Renee.Govender@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0312",
+    "UnitName": "St James Hospital",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Ntombi Nake",
+    "Email": "WSEL.stjames@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0520",
+    "UnitName": "St Dominics Hospital - Dining Room",
+    "Region": "KwaZulu-Natal",
+    "Sector": "Food-Health",
+    "ContactPerson": "Lumka Hlwati",
+    "Email": "Lumka.Hlwati@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0496",
+    "UnitName": "Kumba Sishen Mine",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Andries Janse van Vuuren",
+    "Email": "andries.jansevanvuuren@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0497",
+    "UnitName": "Kumba Sishen Mobilisation",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Andries Janse van Vuuren",
+    "Email": "andries.jansevanvuuren@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "P0273",
+    "UnitName": "Price Waterhouse Coopers - Waterfall",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Naomi Kruger",
+    "Email": "naomi.kruger@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0150",
+    "UnitName": "Telesure Group Services",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Karen Labuschagne",
+    "Email": "karen.labuschagne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0157",
+    "UnitName": "Telesure Vending",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Karen Labuschagne",
+    "Email": "karen.labuschagne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0166",
+    "UnitName": "Telesure Group Heathway",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Karen Labuschagne",
+    "Email": "karen.labuschagne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0277",
+    "UnitName": "Avbob Mutual Assurance Society",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Louise Hattingh",
+    "Email": "louise.hattingh@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0355",
+    "UnitName": "Massmart Germiston",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Khetha Ronald Dhlamini",
+    "Email": "WSJHB.MassmartGosforthPark@EmpactGroup.co.za"
+  },
+  {
+    "UnitCode": "R0067",
+    "UnitName": "Rainbow Farm (Pty) Ltd - Rustenberg",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Jacques Human",
+    "Email": "KKS.CateringNR@rclfoods.com"
+  },
+  {
+    "UnitCode": "A0258",
+    "UnitName": "Altron Warehouse",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "BENITA PRINSLOO",
+    "Email": "wsjhb.altronwarehouse@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0332",
+    "UnitName": "BASF Holdings Pty Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Brandon-Marc Wheeler",
+    "Email": "wsjhb.basf@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "F0088",
+    "UnitName": "Fidelity ADT",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Cally Tolmay",
+    "Email": "wsjhb.fidelityadt@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "H0168",
+    "UnitName": "Hill on Empire",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LERATO NQAMBI",
+    "Email": "Leratonqambi@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0353",
+    "UnitName": "Massmart Riversands",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "David  Maseko",
+    "Email": "wsjhb.massmartriversands@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0354",
+    "UnitName": "Massmart Midrand",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Octavia Ncapai",
+    "Email": "wsjhb.Massmartwaterfall@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0069",
+    "UnitName": "Woolworths FS",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Shane Lange",
+    "Email": "shane.lange@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0116",
+    "UnitName": "Vodacom Care Arc",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "JOSEPH PHALE",
+    "Email": "WSJHB.VodaCareArc@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0117",
+    "UnitName": "Vodacom Unipark Bloemfontein",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LINDI GERICKE",
+    "Email": "WSJHB.VodaUniPark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0122",
+    "UnitName": "Vodacom Nelspruit",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "IGNA PUTTER",
+    "Email": "IGNA.BARNARD@EMPACTGROUP.CO.ZA"
+  },
+  {
+    "UnitCode": "V0123",
+    "UnitName": "Vodacom Polokwane",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "IGNA PUTTER",
+    "Email": "IGNA.BARNARD@EMPACTGROUP.CO.ZA"
+  },
+  {
+    "UnitCode": "V0124",
+    "UnitName": "Vodacom Reinassance Park",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "ENGELINA NKOSI",
+    "Email": "WSJHB.VodaRenaissancePark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0125",
+    "UnitName": "Vodacom Midrand Service Park",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Rodney Chitha Baloyi",
+    "Email": "WSJHB.VodaServicePark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0128",
+    "UnitName": "Vodacom Midrand Techno Park",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "THANDAZO PRUDENCE NGCOBO",
+    "Email": "WSJHB.VodaTechnoPark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0130",
+    "UnitName": "Vodacom Midrand Commercial Park",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LANA LEIGH LE GRANGE",
+    "Email": "WSJHB.VodaCorporatePark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0131",
+    "UnitName": "Vodacom Midrand Vending",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "LANA LEIGH LE GRANGE",
+    "Email": "WSJHB.VodaCorporatePark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0136",
+    "UnitName": "Vodacom Functions",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "KGOPANA JULIA MATSHABA",
+    "Email": "WSJHB.VodaFunctions@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0139",
+    "UnitName": "Vodacom Corporate Park - Krunch",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "IAN VAN DYK (NEW)",
+    "Email": "WSJHB.VodaCorporatePark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0143",
+    "UnitName": "Vodacom Admin",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "IGNA PUTTER",
+    "Email": "IGNA.BARNARD@EMPACTGROUP.CO.ZA"
+  },
+  {
+    "UnitCode": "S0480",
+    "UnitName": "Sanlam Alice Lane",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Jamie-lee Norman",
+    "Email": "wsjhb.sanlamalicelane@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0482",
+    "UnitName": "Sanlam Sky",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Kyle Jordaan",
+    "Email": "wsjhb.sanlamsky@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0521",
+    "UnitName": "Sanlam Gauteng Vending",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Jamie-lee Norman",
+    "Email": "wsjhb.sanlamalicelane@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0527",
+    "UnitName": "Sanlam Functions",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Jamie-lee Norman",
+    "Email": "wsjhb.sanlamalicelane@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0530",
+    "UnitName": "Stay @ West End",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Norberto Garcia",
+    "Email": "wsjhb.westend@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0315",
+    "UnitName": "Merril Lynch",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Evelyn Molale",
+    "Email": "wsjhb.merrillynch@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0486",
+    "UnitName": "Sanlam Sanlynn",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Grace Neluvhaba",
+    "Email": "wsjhb.sanlamsanlynn@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0242",
+    "UnitName": "Amandelbult Recreation Club",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Joane Smith",
+    "Email": "Joane.Smith@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0243",
+    "UnitName": "Amandelbult Tumela Single Quarters",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lee-Anne Schmidt",
+    "Email": "lee-anne.schmdit@empactgroup,co.za"
+  },
+  {
+    "UnitCode": "A0244",
+    "UnitName": "Amandelbult Rethabile Single Quarters",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lee-Anne Schmidt",
+    "Email": "lee-anne.schmdit@empactgroup,co.za"
+  },
+  {
+    "UnitCode": "A0245",
+    "UnitName": "Amandelbult Mlanje Sav",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0246",
+    "UnitName": "Amandelbult Dishaba Sav",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0247",
+    "UnitName": "Amandelbult Tumela Sav",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0262",
+    "UnitName": "Amandelbult Bakery",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lee-Anne Schmidt",
+    "Email": "lee-anne.schmdit@empactgroup,co.za"
+  },
+  {
+    "UnitCode": "A0285",
+    "UnitName": "Amandelbult Mlanje Bar & TShop",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0286",
+    "UnitName": "Amandelbult Dishaba Bar & TShop",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0287",
+    "UnitName": "Amandelbult Tumela Bar & TShop",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Lucas Molokele",
+    "Email": "lucas.mololeke@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0288",
+    "UnitName": "Amandelbult Concentrator Bar & TShop",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Not Applicable",
+    "Email": "Not Applicable"
+  },
+  {
+    "UnitCode": "A0289",
+    "UnitName": "Amandelbult Warehouse Bar & TShop",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Joane Smith",
+    "Email": "Joane.Smith@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0290",
+    "UnitName": "Amandelbult Recreation Club TS",
+    "Region": "Gauteng",
+    "Sector": "B&I-Mining",
+    "ContactPerson": "Joane Smith",
+    "Email": "Joane.Smith@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0522",
+    "UnitName": "CCBSA Bloemfontein",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Abel Selemela",
+    "Email": "wsjhb.abibloemfonten@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0071",
+    "UnitName": "St Andrews College",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "Incorrectly allocatated",
+    "Email": ""
+  },
+  {
+    "UnitCode": "S0475",
+    "UnitName": "St Andrew's School-Bloem",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "Jana Griesel",
+    "Email": "jana.griesel@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0139",
+    "UnitName": "Mangaung Prison",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Kobus van Deventer",
+    "Email": "wsjhb.mangmain@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0141",
+    "UnitName": "Mangaung Commissary",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Eska Baker",
+    "Email": "wsjhb.mangcanteen@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0142",
+    "UnitName": "Mangaung Staff Canteen",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Salomie Benade",
+    "Email": "wsjhb.mangaung@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0248",
+    "UnitName": "Mangaung Bakery",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Kobus van Deventer",
+    "Email": "wsjhb.mangmain@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "U0196",
+    "UnitName": "Unilever Liquids",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "XOLISWA PHILA SIFUMBA",
+    "Email": "WSJHB.UnileverLiquids@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "U0197",
+    "UnitName": "Unilever Powders",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "MAHLATSE THELMA LEGODI",
+    "Email": "WSJHB.UnileverPowders@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "J0013",
+    "UnitName": "Johnson Tiles",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "SIPHIWE GLODIAN BELLA MDEDETYANA",
+    "Email": "wsjhb.johnsontiles@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "J0077",
+    "UnitName": "Johnson Diversy",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "STHEMBELEKUYE NCAMISILE MTHEMBU",
+    "Email": "wsjhb.johnsondiv@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0519",
+    "UnitName": "CCBSA Polokwane",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "MMALAHLA RAMPEDI",
+    "Email": "WSJHB.ABIPolokwane@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "P0282",
+    "UnitName": "PPC Cement Slurry",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "AMOGELANG MAVIS GABORONE",
+    "Email": "Empact.PPCPM@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0138",
+    "UnitName": "National Brands Coffee",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "REFILWE SEISA",
+    "Email": "wsjhb.natbc@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0120",
+    "UnitName": "RCL Foods Sugar & Milling",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "VUYISILE THEMBELIHLE YOLANDE MADIDE",
+    "Email": "WSJHB.KomatipoortSugarMill@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0524",
+    "UnitName": "SAB Alrode Brewery",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "HAROLD MNDAWENI",
+    "Email": "WSJHB.SABAlrode@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0529",
+    "UnitName": "SAB Polokwane",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "MASILO PHINEAS MALUBEKE",
+    "Email": "WSJHB.SABPolokwane@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0094",
+    "UnitName": "Weir Minerals Africa-Alberton",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "SELAPE HERBERT MATHABATHE",
+    "Email": "WSJHB.WeirAlrode@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "W0095",
+    "UnitName": "Weir Minerals Africa-Isando",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "CLIVE NGWENYA",
+    "Email": "WSJHB.WeirIsando@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "R0118",
+    "UnitName": "R\u00f6hlig-Grindrod Pty Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "MORENA SECHABA CHUENE",
+    "Email": "wsjhb.rohliggrindrod@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0521",
+    "UnitName": "CCBSA Nigel",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "MASINGITA NTULI",
+    "Email": "wsjhb.abinigel@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0126",
+    "UnitName": "Liebherr-Africa Pty Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "CHANTELL VORSTER",
+    "Email": "wsjhb.liebherr@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0211",
+    "UnitName": "AVI",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "EUGINE MANGALISO ROXO",
+    "Email": "wsjhb.avi@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0345",
+    "UnitName": "Mpact Limited",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "NELLIA DUBE",
+    "Email": "wsjhb.mpactsprings@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0206",
+    "UnitName": "African Leadership Academy",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "AMANDA CRYSTAL BECK",
+    "Email": "amanda.beck@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0273",
+    "UnitName": "African Leadership Academy Coffee Shop",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "AMANDA CRYSTAL BECK",
+    "Email": "amanda.beck@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0109",
+    "UnitName": "Jules Verne Lycee",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "ANZELLE JENINE SACHS",
+    "Email": "wsjhb.julesverne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0120",
+    "UnitName": "Lycee Francis",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "ANZELLE JENINE SACHS",
+    "Email": "wsjhb.julesverne@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "P0270",
+    "UnitName": "Pretoria Boys High School",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "ANDOLIEN THERON",
+    "Email": "wsjhb.ptaboysschool@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "P0275",
+    "UnitName": "Pretoria Boys High Tuckshop",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "MIYELANI CHARMAINE NGOBENI",
+    "Email": "wsjhb.ptaboysschooltuck@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "P0283",
+    "UnitName": "Penryn College",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "NOMPULELO JEANET MATHONSI",
+    "Email": "wsjhb.penrynhk@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0472",
+    "UnitName": "St Andrews School for Girls",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "SUSANNA TESSA PRINSLOO",
+    "Email": "wsjhb.standrewstuck@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0493",
+    "UnitName": "St Stithians College",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "TALLY DITEND",
+    "Email": "kitchen@stithian.com"
+  },
+  {
+    "UnitCode": "S0494",
+    "UnitName": "St Stithians Tuckshop",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "DECENT THULANI MAPHOSA",
+    "Email": "wsjhb.ststithianstuckshop@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0163",
+    "UnitName": "Thandulwazi Trust",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "TALLY DITEND",
+    "Email": "kitchen@stithian.com"
+  },
+  {
+    "UnitCode": "U0165",
+    "UnitName": "Uplands College Main",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "SHANE ROGERS",
+    "Email": "srogers@uplands.co.za"
+  },
+  {
+    "UnitCode": "U0166",
+    "UnitName": "Uplands College Tuck Shop",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "SHANE ROGERS",
+    "Email": "srogers@uplands.co.za"
+  },
+  {
+    "UnitCode": "U0191",
+    "UnitName": "Uplands Prep Tuckshop-PTA",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "SHANE ROGERS",
+    "Email": "srogers@uplands.co.za"
+  },
+  {
+    "UnitCode": "U0192",
+    "UnitName": "Uplands College Tuckshop-PTA",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "SHANE ROGERS",
+    "Email": "srogers@uplands.co.za"
+  },
+  {
+    "UnitCode": "U0194",
+    "UnitName": "Uplands Prep",
+    "Region": "Gauteng",
+    "Sector": "Food-Educ",
+    "ContactPerson": "MARLAINE ROBBERTS",
+    "Email": "mrobberts@uplands.co.za"
+  },
+  {
+    "UnitCode": "A0275",
+    "UnitName": "Anglo Crown Mines",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "MARLAINE ROBBERTS",
+    "Email": "mrobberts@uplands.co.za"
+  },
+  {
+    "UnitCode": "D0019",
+    "UnitName": "De Beers Diamonds",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Brenda Ramonyaluoe",
+    "Email": "wsjhb.debeers@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0208",
+    "UnitName": "Discovery Sandton",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Johan Flint",
+    "Email": "Johan.flint@empactgroup.co.z"
+  },
+  {
+    "UnitCode": "N0296",
+    "UnitName": "Norton Rose Fulbright South Africa Inc",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Coenraad Coetzee",
+    "Email": "coenraad.coetzee@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0305",
+    "UnitName": "Norton Rose Fullbright JHB",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Coenraad Coetzee",
+    "Email": "coenraad.coetzee@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0354",
+    "UnitName": "BP Rosebank",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Bongiwe Mahlangu",
+    "Email": "wsjhb.bprosebank@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0222",
+    "UnitName": "DSV Shared Services (Pty) Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Ronald Maddox",
+    "Email": "ronald.maddox@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0279",
+    "UnitName": "African Bank Limited",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Sibusiso Ndlovu",
+    "Email": "sibusiso.ndlovu@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "O0042",
+    "UnitName": "Oracle Coporation SA (Pty) Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Thulani Khumalo",
+    "Email": "wsjhb.oracle@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0511",
+    "UnitName": "Sun International Head Office",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Nobuhle Masombuka",
+    "Email": "wsjhb.suninternational@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "A0268",
+    "UnitName": "Amazon",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Lethabo Mphelo",
+    "Email": "wsjhb.amazon@empactgroup.cp.za"
+  },
+  {
+    "UnitCode": "A0125",
+    "UnitName": "ABI Linbro Park",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "SIKHULULIWE MNCUBE",
+    "Email": "wsjhb.abilinbropark@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0351",
+    "UnitName": "Bridgestone South Africa - Brits",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "JUSTIN JACOBS",
+    "Email": "wsjhb.bridgestonebrits@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0102",
+    "UnitName": "Coca Cola Canners",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "LENA LEKOTA",
+    "Email": "wsjhb.cocacolacanners@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0523",
+    "UnitName": "CCBSA PTA West",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "HELLEN NTHITHE",
+    "Email": "wsjhb.ccbsaptawest@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "N0309",
+    "UnitName": "National Brands Limited",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "THOKO MAMATELA",
+    "Email": "wsjhb.nationalbrandslimited@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0507",
+    "UnitName": "SAB Rosslyn",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "LUCIA MABUNDA",
+    "Email": "wsjhb.sabrosslyn@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0522",
+    "UnitName": "SAB Chamdor Brewery",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "MAGDELINE CHEMPE",
+    "Email": "wsjhb.sabchamdorbrewery@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "C0261",
+    "UnitName": "Citibank",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "WINNIE NGOBENI",
+    "Email": "winnie.ngobeni@citi.com"
+  },
+  {
+    "UnitCode": "C0525",
+    "UnitName": "Citi Expresso Pty Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "WINNIE NGOBENI",
+    "Email": "wsjhb.citibank@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "M0325",
+    "UnitName": "Massmart Services-Net Cost Plus",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "JANESE SONI",
+    "Email": "janese.soni@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0076",
+    "UnitName": "Toyota SA (Pty) Ltd",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "SUNNETTE DE GRAY BIRCH",
+    "Email": "wsjhb.toyotasaptyltd@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "B0352",
+    "UnitName": "Bridgestone South Africa - Midrand",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "LETHABO MSEKWAMENG",
+    "Email": "wsjhb.bridgestonemidrand@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0180",
+    "UnitName": "DHL Supply Chain SA",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "BOITUMELO SITHOLE",
+    "Email": "wsjhb.dhlsupplychainsa@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0142",
+    "UnitName": "Toyota Parkhaven",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "ABRAHAM MBATA",
+    "Email": "wsjhb.toyotaparkhaven@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0503",
+    "UnitName": "Siemens Midrand",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Maureen Maoko",
+    "Email": "wsjhb.siemensmidrand@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0513",
+    "UnitName": "Siemens Midrand Catch Up Caf\u00e9",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Maureen Maoko",
+    "Email": "wsjhb.siemensmidrand@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0120",
+    "UnitName": "Emperors Palace",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Larraine Ratompo",
+    "Email": "empact.emperorspm@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0136",
+    "UnitName": "Emperors Vending",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Larraine Ratompo",
+    "Email": "empact.emperorspm@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "I0009",
+    "UnitName": "Acsecoroc Div Ac SA",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Sophie Mnune",
+    "Email": "wsjhb.inerocatlas@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0523",
+    "UnitName": "SAB Zone Headquarters",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Judith Mthembu",
+    "Email": "wsjhb.sabbryanston@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0525",
+    "UnitName": "SAB Central Office Sandton",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Neliswe Milandzi",
+    "Email": "wsjhb.sabsandton@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0138",
+    "UnitName": "The Source - Emperor",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Larraine Ratompo",
+    "Email": "empact.emperorspm@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "T0164",
+    "UnitName": "Thyssenkrupp Ind Sol Africa",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Lehlogonolo Simelane",
+    "Email": "wjhb.thyssenkrupp@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "V0058",
+    "UnitName": "Vitro Punched Tiles",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Bridget Thola",
+    "Email": "wsjhp.vitrotiles@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "L0151",
+    "UnitName": "Liquid Telecom Food",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "Pfarela",
+    "Email": "WSJHB.LiquidTelecom@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "E0137",
+    "UnitName": "Everite Building Products",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Sarah Mbhele",
+    "Email": "wsjhb.everitebuild@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "S0471",
+    "UnitName": "Sedibeng Breweries-Heineken SA",
+    "Region": "Gauteng",
+    "Sector": "B&I-Indust.",
+    "ContactPerson": "Lindiwe Masale",
+    "Email": "wsjhb.heineken@empactgroup.co.za"
+  },
+  {
+    "UnitCode": "D0215",
+    "UnitName": "Deloitte Waterfall",
+    "Region": "Gauteng",
+    "Sector": "B&I-Comm.",
+    "ContactPerson": "",
+    "Email": ""
+  }
+]

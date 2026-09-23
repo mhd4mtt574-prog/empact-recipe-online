@@ -1,0 +1,219 @@
+@model RecipeEditViewModel
+@{ ViewData["Title"] = Model.Id.HasValue ? "Edit recipe" : "New recipe"; var editing=Model.Id.HasValue; }
+<div class="page-heading"><div><span class="eyebrow">CLEAN COSTING TEMPLATE</span><h1>@(editing?"Edit recipe":"Create a new recipe")</h1><p>Recipe costing follows the attached clean costing sheet, column for column.</p></div><a class="button secondary" asp-action="Index">← Recipe library</a></div>
+<form asp-controller="Recipes" asp-action="Save" method="post" class="costing-editor-form">
+<input asp-for="Id" type="hidden"/>
+<div asp-validation-summary="All" class="validation"></div>
+<section class="form-section clean-costing-header">
+  <div class="form-section-head"><span>1</span><div><h2>Recipe information</h2><p>Enter the same recipe controls used at the top of the costing template.</p></div></div>
+  <div class="clean-header-grid">
+    <div class="wide"><label asp-for="Name">Recipe</label><input asp-for="Name" placeholder="Recipe name"/></div>
+    <div><label asp-for="Code">Recipe code</label><input asp-for="Code" placeholder="e.g. CHK-001"/></div>
+    <div><label asp-for="Department">Costing department</label><select asp-for="Department">@foreach(string d in ViewBag.Departments){<option>@d</option>}</select></div>
+    <div><label asp-for="Category">Category</label><select asp-for="Category">@foreach(string c in ViewBag.Categories){<option>@c</option>}</select></div>
+    <div><label asp-for="Unit">Costing division</label><select asp-for="Unit">@foreach(string u in ViewBag.Units){<option>@u</option>}</select></div>
+    <div><label asp-for="BasePortions">Standard portion basis (H7)</label><input asp-for="BasePortions" min="1"/></div>
+    <div><label asp-for="StandardPortions">Standard recipe portions</label><input asp-for="StandardPortions" value="10" min="10" max="10" readonly/><small>All master recipes are standardised to 10 portions.</small></div>
+    <div><label asp-for="WastePercent">Waste % (J1)</label><input asp-for="WastePercent" min="0" max="100" step="0.01"/><small>Enter 5 for 5%.</small></div>
+    <div><label asp-for="DesiredMarginPercent">Desired margin %</label><input asp-for="DesiredMarginPercent" min="0" max="99.99" step="0.01"/></div>
+  </div>
+</section>
+<section class="form-section ingredient-sheet-section clean-sheet-section">
+  <div class="form-section-head ingredient-section-heading"><span>2</span><div><h2>Ingredients and costing</h2><p>All columns are editable by administrators. Formula columns J–M calculate automatically until you type an override.</p></div><div class="ingredient-heading-actions no-print"><button class="button primary compact" id="openAplSearch" type="button">⌕ Search APL Ingredients</button><button class="button secondary compact" id="addIngredientRowTop" type="button">＋ Add blank row</button></div></div>
+  <textarea asp-for="IngredientsText" class="ingredient-source" aria-hidden="true"></textarea>
+  <span asp-validation-for="IngredientsText"></span>
+  <div class="sheet-toolbar no-print">
+    <button class="button secondary compact" id="addIngredientRow" type="button">＋ Add row</button>
+    <button class="button secondary compact" id="addTenRows" type="button">＋ Add 10 rows</button>
+    <button class="button secondary compact" id="clearEmptyRows" type="button">Remove empty rows</button>
+    <button class="button secondary compact" id="resetFormulaOverrides" type="button">↺ Use formulas for all rows</button>
+    <span>Paste up to twelve Excel columns starting at APL Code. Formula columns can be overridden.</span>
+  </div>
+  <div class="ingredient-grid-wrap clean-grid-wrap">
+    <table class="ingredient-grid clean-costing-grid" id="ingredientGrid">
+      <thead><tr><th class="row-number">#</th><th>APL Code</th><th>Product</th><th>Cooking Notes</th><th>Pack Size</th><th>Purchase Price</th><th>Factor</th><th>Standard Qty</th><th>Unit of Measure</th><th>Batch Issue <small>editable</small></th><th>Waste Factor <small>editable</small></th><th>Batch Cost <small>editable</small></th><th>Cost / Portion <small>editable</small></th><th></th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><td colspan="10"><strong>Recipe totals</strong></td><td id="totalWaste">R 0.00</td><td id="totalBatch">R 0.00</td><td id="totalPortion">R 0.00</td><td></td></tr></tfoot>
+    </table>
+  </div>
+
+  <div class="apl-picker" id="aplPicker" hidden aria-hidden="true">
+    <div class="apl-picker-backdrop" data-close-apl></div>
+    <section class="apl-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="aplPickerTitle">
+      <div class="apl-picker-head">
+        <div><span class="eyebrow">APPROVED PRODUCT LIST</span><h2 id="aplPickerTitle">Add ingredients from the APL</h2><p>Search the selected costing division, choose one or more products, and add them to the recipe.</p></div>
+        <button class="apl-picker-close" type="button" data-close-apl aria-label="Close">×</button>
+      </div>
+      <div class="apl-picker-controls">
+        <label><span>Costing division</span><select id="aplSearchDivision"><option value="CT">Cape Town</option><option value="JHB">Gauteng</option><option value="KZN">KwaZulu-Natal</option></select></label>
+        <label class="apl-search-field"><span>Search APL</span><input id="aplSearchQuery" type="search" placeholder="Product code, product, brand or supplier" autocomplete="off"></label>
+        <button class="button primary" id="runAplSearch" type="button">Search</button>
+      </div>
+      <div class="apl-picker-status" id="aplPickerStatus" aria-live="polite">Enter a product code or description to search.</div>
+      <div class="apl-picker-results-wrap">
+        <table class="apl-picker-results">
+          <thead><tr><th><input id="selectAllApl" type="checkbox" aria-label="Select all visible products"></th><th>APL Code</th><th>Product</th><th>Brand / Supplier</th><th>Pack Size</th><th>Factor</th><th>Purchase Price</th><th>Comparable Cost</th></tr></thead>
+          <tbody id="aplPickerResults"></tbody>
+        </table>
+      </div>
+      <div class="apl-picker-footer">
+        <span id="aplSelectionCount">0 products selected</span>
+        <div><button class="button secondary" type="button" data-close-apl>Cancel</button><button class="button primary" id="addSelectedApl" type="button" disabled>Add selected ingredients</button></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="formula-strip">
+    <strong>Clean-sheet formulas:</strong>
+    <span>Batch Issue = Standard Qty ÷ Standard Portion Basis × Required Portions</span>
+    <span>Waste Factor = (Batch Issue × Purchase Price ÷ Factor) × Waste %</span>
+    <span>Batch Cost = (Batch Issue × Purchase Price ÷ Factor) + Waste Factor</span>
+    <span>Cost / Portion = Batch Cost ÷ Required Portions</span>
+  </div>
+</section>
+<div class="recipe-support-grid">
+<section class="form-section"><div class="form-section-head"><span>3</span><div><h2>Preparation and service</h2></div></div><label asp-for="Method"></label><textarea asp-for="Method" rows="8"></textarea><label asp-for="ServingInstructions"></label><textarea asp-for="ServingInstructions" rows="5"></textarea></section>
+<section class="form-section"><div class="form-section-head"><span>4</span><div><h2>Allergens and approval</h2><p>Automatic detection runs whenever the recipe is saved or an ingredient is replaced.</p></div></div><label asp-for="AllergensText">Confirmed / manually declared contains</label><input asp-for="AllergensText"/><label asp-for="MayContainText">Confirmed / manually declared may contain</label><input asp-for="MayContainText"/><div class="auto-allergen-preview"><strong>Latest automatic scan</strong><p><b>Contains:</b> @(ViewBag.AutoDetectedAllergens is IEnumerable<string> autoContains && autoContains.Any()?string.Join(", ",autoContains):"None detected")</p><p><b>May contain:</b> @(ViewBag.AutoDetectedMayContain is IEnumerable<string> autoMay && autoMay.Any()?string.Join(", ",autoMay):"None detected")</p>@if(ViewBag.AutoAllergenFindings is IEnumerable<EmpactRecipeOnline.Models.AllergenDetectionSource> findings && findings.Any()){<details><summary>Show ingredient triggers</summary><ul>@foreach(var finding in findings){<li><strong>@finding.Allergen</strong> — @finding.IngredientName (@finding.DetectionType: @finding.Detail)</li>}</ul></details>}</div><label class="toggle-row"><input asp-for="SupplierVerificationRequired"/><span><strong>Supplier verification required</strong></span></label><label class="toggle-row"><input asp-for="IsApproved"/><span><strong>Recipe approved</strong></span></label></section>
+</div>
+<div class="recipe-support-grid nutrition-editor-grid">
+<section class="form-section"><div class="form-section-head"><span>5</span><div><h2>Nutritional analysis</h2><p>Automatic ingredient-based values are generated from the recipe detail screen. These fields remain available for an approved supplier/dietitian override.</p></div></div>
+<div class="nutrition-input-grid">
+<label><span>Energy (kJ)</span><input asp-for="EnergyKjPerPortion" min="0" step="0.01"/></label>
+<label><span>Energy (kcal)</span><input asp-for="EnergyKcalPerPortion" min="0" step="0.01"/></label>
+<label><span>Protein (g)</span><input asp-for="ProteinGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Carbohydrate (g)</span><input asp-for="CarbohydrateGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Total sugar (g)</span><input asp-for="SugarGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Total fat (g)</span><input asp-for="FatGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Saturated fat (g)</span><input asp-for="SaturatedFatGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Fibre (g)</span><input asp-for="FibreGramsPerPortion" min="0" step="0.01"/></label>
+<label><span>Sodium (mg)</span><input asp-for="SodiumMgPerPortion" min="0" step="0.01"/></label>
+</div>
+<label class="toggle-row"><input asp-for="NutritionVerified"/><span><strong>Nutrition values verified</strong><small>Confirm only after checking supplier specifications or an approved nutrition analysis.</small></span></label>
+</section>
+<section class="form-section"><div class="form-section-head"><span>6</span><div><h2>Special diets</h2><p>Record only diets reviewed against every ingredient and supplier declaration.</p></div></div>
+<label asp-for="SpecialDietsText">Suitable diets</label><input asp-for="SpecialDietsText" placeholder="e.g. Vegetarian, Halal, Gluten-free"/><small>Suggested terms: Vegetarian, Vegan, Halal, Gluten-free, Dairy-free, Egg-free, Nut-free, Pork-free.</small>
+<label class="toggle-row"><input asp-for="DietitianApprovalRequired"/><span><strong>Dietitian approval required</strong><small>Use for diabetic-friendly, low-sodium, renal or other therapeutic diets.</small></span></label>
+</section>
+</div>
+<div class="editor-actions no-print"><a class="button secondary" asp-action="Index">Cancel</a><button class="button secondary" name="actionType" value="detect" type="submit">Re-scan allergens</button><button class="button primary" name="actionType" value="save" type="submit">@(editing?"Save recipe":"Create recipe")</button></div>
+</form>
+@section Scripts {
+<script>
+(() => {
+ const source=document.getElementById('IngredientsText'), body=document.querySelector('#ingredientGrid tbody');
+ const base=document.getElementById('BasePortions'), portions=document.getElementById('StandardPortions'), wastePct=document.getElementById('WastePercent'), costingUnit=document.getElementById('Unit');
+ const picker=document.getElementById('aplPicker'), query=document.getElementById('aplSearchQuery'), division=document.getElementById('aplSearchDivision'), resultsBody=document.getElementById('aplPickerResults'), status=document.getElementById('aplPickerStatus'), selectionCount=document.getElementById('aplSelectionCount'), addSelected=document.getElementById('addSelectedApl'), selectAll=document.getElementById('selectAllApl');
+ let aplResults=[];
+ const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+ const blank=()=>['','','','','','1','','','','','',''];
+ const num=v=>{const n=parseFloat(String(v??'').trim().replace(/\s/g,'').replace(',','.'));return Number.isFinite(n)?n:0};
+ const money=n=>'R '+(Number.isFinite(n)?n:0).toFixed(2);
+ function row(values=blank(), options={}){
+   values=[...values,...blank()].slice(0,12);
+   const tr=document.createElement('tr');
+   tr.dataset.aplCode=values[0]||'';
+   tr.dataset.aplLinked=options.linked?'true':'false';
+   const editable=values.map((v,i)=>{
+     const override=i>=8;
+     const manual=override && String(v).trim()!=='';
+     return `<td><input class="cell-input c${i}${override?' formula-input':''}" ${[4,5,6,8,9,10,11].includes(i)?'inputmode="decimal"':''} ${override?`data-manual="${manual?'true':'false'}" title="Formula value — type to override"`:''} value="${esc(v)}"></td>`;
+   }).join('');
+   tr.innerHTML=`<td class="row-number"></td>${editable}<td><button type="button" class="row-reset-formula" title="Reset this row to formulas">↺</button><button type="button" class="row-delete" title="Delete row">×</button></td>`;
+   if(options.linked) tr.classList.add('apl-linked-row');
+   body.appendChild(tr);renumber();calculate();return tr;
+ }
+ function renumber(){[...body.rows].forEach((r,i)=>r.querySelector('.row-number').textContent=i+9)}
+ function parse(){
+   const lines=(source.value||'').split(/\r?\n/).filter(x=>x.trim());
+   lines.forEach(line=>{const p=line.split('|').map(x=>x.trim());row(p,{linked:!!p[0]});});
+   for(let i=0;i<Math.max(12-lines.length,3);i++)row();
+ }
+ function setFormula(input,value,format){if(input.dataset.manual!=='true')input.value=format(value)}
+ function calculate(){
+   let totalWaste=0,totalBatch=0,totalPortion=0;
+   const h7=Math.max(1,num(base.value)), c4=Math.max(1,num(portions.value)), j1=Math.max(0,num(wastePct.value))/100;
+   [...body.rows].forEach(r=>{
+     const c=[...r.querySelectorAll('.cell-input')];
+     const price=num(c[4].value), factor=num(c[5].value), stdQty=num(c[6].value);
+     const formulaIssue=stdQty/h7*c4;
+     setFormula(c[8],formulaIssue,n=>n.toFixed(4));
+     const issue=num(c[8].value);
+     const baseCost=factor>0?(issue*price/factor):0;
+     const formulaWaste=baseCost*j1;
+     setFormula(c[9],formulaWaste,n=>n.toFixed(2));
+     const waste=num(c[9].value);
+     const formulaBatch=baseCost+waste;
+     setFormula(c[10],formulaBatch,n=>n.toFixed(2));
+     const batch=num(c[10].value);
+     const formulaPortion=batch/c4;
+     setFormula(c[11],formulaPortion,n=>n.toFixed(2));
+     const portionCost=num(c[11].value);
+     totalWaste+=waste;totalBatch+=batch;totalPortion+=portionCost;
+     r.classList.toggle('factor-error',c.some((x,i)=>i<8&&x.value.trim())&&factor<=0);
+     r.classList.toggle('has-costing-override',c.slice(8).some(x=>x.dataset.manual==='true'));
+   });
+   document.getElementById('totalWaste').textContent=money(totalWaste);
+   document.getElementById('totalBatch').textContent=money(totalBatch);
+   document.getElementById('totalPortion').textContent=money(totalPortion);
+ }
+ function serialize(){
+   source.value=[...body.rows].map(r=>{
+     const cells=[...r.querySelectorAll('.cell-input')];
+     return cells.map((x,i)=>i>=8&&x.dataset.manual!=='true'?'':x.value.trim()).join(' | ');
+   }).filter(x=>x.split('|').slice(0,8).some((v,i)=>i!==5&&v.trim())).join('\n');
+ }
+ function resetRow(r){r.querySelectorAll('.formula-input').forEach(x=>{x.dataset.manual='false';x.value=''});calculate()}
+ function divisionForUnit(value){const v=String(value||'').toLowerCase();if(v.includes('gauteng')||v.includes('johannesburg')||v==='jhb')return'JHB';if(v.includes('kwa')||v.includes('natal')||v.includes('durban')||v==='kzn')return'KZN';return'CT'}
+ function openPicker(){division.value=divisionForUnit(costingUnit.value);picker.hidden=false;picker.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');setTimeout(()=>query.focus(),50)}
+ function closePicker(){picker.hidden=true;picker.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+ function markLookupState(r,state,message=''){r.classList.remove('apl-code-looking-up','apl-code-found','apl-code-not-found');if(state)r.classList.add(state);const code=r.querySelector('.c0');if(code){code.title=message;code.setAttribute('aria-label',message||'APL Code')}}
+ async function lookupCodeForRow(r){
+   const cells=[...r.querySelectorAll('.cell-input')],code=(cells[0]?.value||'').trim();
+   if(!code){r.dataset.aplCode='';r.dataset.aplLinked='false';r.classList.remove('apl-linked-row');markLookupState(r,'');return false}
+   if(r.dataset.lookupCode===code.toLowerCase()&&r.dataset.lookupDivision===divisionForUnit(costingUnit.value)&&r.dataset.aplLinked==='true')return true;
+   const currentToken=String(Date.now())+Math.random();r.dataset.lookupToken=currentToken;markLookupState(r,'apl-code-looking-up','Looking up this item code in the APL…');
+   try{
+     const div=divisionForUnit(costingUnit.value);
+     const response=await fetch(`@Url.Action("LookupAplCode","Recipes")?code=${encodeURIComponent(code)}&division=${encodeURIComponent(div)}`,{headers:{'Accept':'application/json'}});
+     if(!response.ok)throw new Error();const data=await response.json();if(r.dataset.lookupToken!==currentToken)return false;
+     if(!data.found||!data.product){r.dataset.aplLinked='false';r.classList.remove('apl-linked-row');markLookupState(r,'apl-code-not-found','No exact active APL match was found. You can keep this as a manually entered ingredient.');return false}
+     const p=data.product;
+     cells[0].value=p.productCode||code;cells[1].value=p.productName||'';cells[3].value=p.packSize||p.unitOfMeasure||'';cells[4].value=Number(p.purchasePrice||0).toFixed(2);cells[5].value=String(p.factor||1);cells[7].value=p.unitOfMeasure||cells[7].value;
+     r.dataset.aplCode=p.productCode||code;r.dataset.lookupCode=String(p.productCode||code).toLowerCase();r.dataset.lookupDivision=div;r.dataset.aplLinked='true';r.classList.add('apl-linked-row');markLookupState(r,'apl-code-found',`APL product loaded: ${p.productName||p.productCode}`);calculate();return true;
+   }catch{if(r.dataset.lookupToken===currentToken)markLookupState(r,'apl-code-not-found','APL lookup could not be completed. The row remains editable.');return false}
+ }
+ function selectedCodes(){return new Set([...body.rows].map(r=>r.querySelector('.c0')?.value.trim().toLowerCase()).filter(Boolean))}
+ function updateSelection(){const n=resultsBody.querySelectorAll('input[type=checkbox]:checked').length;selectionCount.textContent=`${n} product${n===1?'':'s'} selected`;addSelected.disabled=n===0;const all=[...resultsBody.querySelectorAll('input[type=checkbox]:not(:disabled)')];selectAll.checked=all.length>0&&all.every(x=>x.checked);selectAll.indeterminate=all.some(x=>x.checked)&&!all.every(x=>x.checked)}
+ function renderResults(){
+   const existing=selectedCodes();resultsBody.innerHTML='';
+   const bestByUnit={};
+   aplResults.forEach(p=>{const unit=String(p.normalizedUnit||'');const cost=Number(p.normalizedCost);if(unit&&Number.isFinite(cost)&&cost>0&&(bestByUnit[unit]===undefined||cost<bestByUnit[unit]))bestByUnit[unit]=cost});
+   aplResults.forEach((p,i)=>{const duplicate=existing.has(String(p.productCode).toLowerCase());const tr=document.createElement('tr');const unit=String(p.normalizedUnit||'');const normalizedCost=Number(p.normalizedCost);const bestValue=unit&&Number.isFinite(normalizedCost)&&normalizedCost>0&&Math.abs(normalizedCost-bestByUnit[unit])<0.0001;if(duplicate)tr.classList.add('apl-already-added');if(bestValue)tr.classList.add('apl-best-value');const comparable=p.normalizedCostLabel?`<strong>${esc(p.normalizedCostLabel)}</strong>${bestValue?'<span class="best-value-chip">Best value</span>':''}`:'<span class="not-comparable">Not comparable</span>';tr.innerHTML=`<td><input type="checkbox" data-index="${i}" ${duplicate?'disabled':''}></td><td><strong>${esc(p.productCode)}</strong><small>${esc(p.division)}</small></td><td><strong>${esc(p.productName)}</strong><small>${esc([p.description,p.specification].filter(Boolean).join(' · '))}</small></td><td>${esc([p.brand,p.supplier].filter(Boolean).join(' · '))}</td><td>${esc(p.packSize||'—')}</td><td>${esc(p.factor)}</td><td>${money(Number(p.purchasePrice))}${duplicate?'<span class="already-chip">Already added</span>':''}</td><td>${comparable}</td>`;resultsBody.appendChild(tr)});
+   const comparableCount=aplResults.filter(p=>p.normalizedCostLabel).length;
+   status.textContent=aplResults.length?`${aplResults.length} matching products found in ${division.options[division.selectedIndex].text}. ${comparableCount} could be compared by pack contents; the lowest R/kg, R/L or R/each is highlighted green.`:'No matching active APL products were found.';updateSelection();
+ }
+ async function searchApl(){
+   status.textContent='Searching the Approved Product List…';resultsBody.innerHTML='';addSelected.disabled=true;
+   try{const response=await fetch(`@Url.Action("SearchApl","Recipes")?q=${encodeURIComponent(query.value.trim())}&division=${encodeURIComponent(division.value)}&limit=100`,{headers:{'Accept':'application/json'}});if(!response.ok)throw new Error();const data=await response.json();aplResults=data.results||[];renderResults()}catch{aplResults=[];status.textContent='The APL search could not be completed. Please try again.';updateSelection()}
+ }
+ function addSelectedProducts(){
+   const checked=[...resultsBody.querySelectorAll('input[type=checkbox]:checked')],existing=selectedCodes();let added=0;
+   checked.forEach(box=>{const p=aplResults[Number(box.dataset.index)];if(!p||existing.has(String(p.productCode).toLowerCase()))return;const values=[p.productCode,p.productName,'',p.packSize||p.unitOfMeasure||'',Number(p.purchasePrice).toFixed(2),String(p.factor||1),'',p.unitOfMeasure||'','','','',''];const empties=[...body.rows].filter(r=>[...r.querySelectorAll('.cell-input')].slice(0,8).every((x,i)=>i===5||!x.value.trim()));let target=empties.shift();if(target){const cells=[...target.querySelectorAll('.cell-input')];values.forEach((v,i)=>{cells[i].value=v;if(i>=8)cells[i].dataset.manual='false'});target.dataset.aplCode=p.productCode;target.dataset.aplLinked='true';target.classList.add('apl-linked-row')}else row(values,{linked:true});existing.add(String(p.productCode).toLowerCase());added++});
+   calculate();closePicker();if(added)document.querySelector('.ingredient-grid-wrap').scrollIntoView({behavior:'smooth',block:'start'});
+ }
+ document.getElementById('addIngredientRow').addEventListener('click',()=>row());document.getElementById('addIngredientRowTop').addEventListener('click',()=>row());
+ document.getElementById('addTenRows').addEventListener('click',()=>{for(let i=0;i<10;i++)row()});
+ document.getElementById('clearEmptyRows').addEventListener('click',()=>{[...body.rows].forEach(r=>{const c=[...r.querySelectorAll('.cell-input')].slice(0,8);if(c.every((x,i)=>i===5||!x.value.trim()))r.remove()});if(!body.rows.length)row();renumber();calculate()});
+ document.getElementById('resetFormulaOverrides').addEventListener('click',()=>{if(confirm('Reset Batch Issue, Waste Factor, Batch Cost and Cost per Portion to the clean-sheet formulas for every row?'))[...body.rows].forEach(resetRow)});
+ let codeLookupTimer;
+ body.addEventListener('input',e=>{const cell=e.target.closest('.cell-input');if(!cell)return;if(cell.classList.contains('formula-input'))cell.dataset.manual='true';if(cell.classList.contains('c0')){const r=cell.closest('tr');r.dataset.aplLinked='false';r.classList.remove('apl-linked-row');clearTimeout(codeLookupTimer);codeLookupTimer=setTimeout(()=>lookupCodeForRow(r),450)}calculate()});
+ body.addEventListener('change',e=>{const code=e.target.closest('.c0');if(code)lookupCodeForRow(code.closest('tr'))});
+ body.addEventListener('focusout',e=>{const code=e.target.closest('.c0');if(code)lookupCodeForRow(code.closest('tr'))});
+ body.addEventListener('click',e=>{if(e.target.classList.contains('row-delete')){e.target.closest('tr').remove();if(!body.rows.length)row();renumber();calculate()}if(e.target.classList.contains('row-reset-formula'))resetRow(e.target.closest('tr'))});
+ body.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const input=e.target.closest('.cell-input');if(!input)return;e.preventDefault();const rowEl=input.closest('tr'),cells=[...rowEl.querySelectorAll('.cell-input')],col=cells.indexOf(input);let next=rowEl.nextElementSibling;if(!next){row();next=body.lastElementChild}next.querySelectorAll('.cell-input')[col].focus()});
+ body.addEventListener('paste',e=>{const input=e.target.closest('.cell-input');if(!input)return;const text=e.clipboardData.getData('text');if(!text.includes('\t')&&!text.includes('\n'))return;e.preventDefault();const startRow=[...body.rows].indexOf(input.closest('tr')),startCol=[...input.closest('tr').querySelectorAll('.cell-input')].indexOf(input),rows=text.replace(/\r/g,'').split('\n').filter(Boolean).map(x=>x.split('\t'));while(body.rows.length<startRow+rows.length)row();const affected=[];rows.forEach((vals,ri)=>{const targetRow=body.rows[startRow+ri],cells=[...targetRow.querySelectorAll('.cell-input')];vals.slice(0,12-startCol).forEach((v,ci)=>{const target=cells[startCol+ci];target.value=v.trim();if(startCol+ci>=8)target.dataset.manual='true'});if(startCol===0||startCol<1&&vals.length>0)affected.push(targetRow)});calculate();affected.forEach(r=>lookupCodeForRow(r))});
+ document.getElementById('openAplSearch').addEventListener('click',openPicker);document.querySelectorAll('[data-close-apl]').forEach(x=>x.addEventListener('click',closePicker));document.getElementById('runAplSearch').addEventListener('click',searchApl);query.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();searchApl()}});division.addEventListener('change',searchApl);resultsBody.addEventListener('change',updateSelection);selectAll.addEventListener('change',()=>{resultsBody.querySelectorAll('input[type=checkbox]:not(:disabled)').forEach(x=>x.checked=selectAll.checked);updateSelection()});addSelected.addEventListener('click',addSelectedProducts);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!picker.hidden)closePicker()});
+ [base,portions,wastePct].forEach(x=>x.addEventListener('input',calculate));costingUnit.addEventListener('change',()=>{[...body.rows].filter(r=>r.querySelector('.c0')?.value.trim()).forEach(r=>lookupCodeForRow(r))});source.closest('form').addEventListener('submit',serialize);parse();
+})();
+</script>
+}

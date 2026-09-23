@@ -1,0 +1,20 @@
+@model List<Recipe>
+@{ ViewData["Title"]="Recipes"; var groups=Model.GroupBy(x=>x.Department).OrderBy(g=>RecipeDepartments.SortOrder(g.Key)); }
+<div class="page-heading">
+    <div><span class="eyebrow">RECIPE LIBRARY</span><h1>Department costings</h1><p>Recipes are grouped by costing department for easier review and control.</p></div>
+    @if(User.IsInRole("Administrator")){<div class="heading-actions"><a class="button secondary" asp-action="Allocate">⇄ Allocate recipes</a><a class="button primary" asp-action="Create">＋ Add recipe</a></div>}
+</div>
+<form method="get" class="filter-panel no-print">
+    <div class="search-field"><label for="q">Search recipes</label><div><span>⌕</span><input id="q" name="q" value="@ViewBag.Query" placeholder="Recipe name or code"/></div></div>
+    <div><label for="department">Department</label><select id="department" name="department"><option value="">All departments</option>@foreach(string d in ViewBag.Departments){<option value="@d" selected="@(d==ViewBag.Department)">@d</option>}</select></div>
+    <div><label for="category">Category</label><select id="category" name="category"><option value="">All categories</option>@foreach(string c in ViewBag.Categories){<option value="@c" selected="@(c==ViewBag.Category)">@c</option>}</select></div>
+    <button class="button secondary" type="submit">Apply filters</button><a class="clear-filter" asp-action="Index">Clear</a>
+</form>
+<div class="results-bar"><span><strong>@Model.Count</strong> recipes found</span><span>Grouped by department</span></div>
+@if(Model.Count==0){<section class="empty"><div class="empty-icon">⌕</div><h2>No recipes found</h2><p>Try a different search term or remove a filter.</p></section>}else{
+@foreach(var group in groups){
+<section class="department-group">
+<div class="department-heading"><div><span class="department-dot"></span><h2>@group.Key</h2></div><span>@group.Count() recipes</span></div>
+<div class="recipe-grid">@foreach(var item in group){<partial name="_RecipeCard" model="item" />}</div>
+</section>
+}}

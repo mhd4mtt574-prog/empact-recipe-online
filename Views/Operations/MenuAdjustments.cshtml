@@ -1,0 +1,165 @@
+@model MenuAdjustmentViewModel
+@{ ViewData["Title"] = "Recipe adjustments"; }
+<div class="page-heading">
+    <div><span class="eyebrow">ADMINISTRATION</span><h1>Recipe adjustments</h1><p>Replace one recipe ingredient across the full recipe catalogue with an active approved product.</p></div>
+</div>
+
+<form method="get" class="filters" style="margin-bottom:1rem">
+    <input type="hidden" name="q" value="@Model.Query" />
+    <input type="hidden" name="sourceIngredient" value="@Model.SourceIngredient" />
+    <input type="hidden" name="aplQ" value="@Model.ApprovedProductQuery" />
+    <input type="hidden" name="lowerQ" value="@Model.LowerProductQuery" />
+    <label>Recipe pricing region
+        <select name="division">
+            <option value="CT" selected="@(Model.Division == "CT")">Cape Town</option>
+            <option value="JHB" selected="@(Model.Division == "JHB")">Gauteng</option>
+            <option value="KZN" selected="@(Model.Division == "KZN")">KwaZulu-Natal</option>
+        </select>
+    </label>
+    <button class="button primary" type="submit">Load region</button>
+</form>
+
+<section class="data-panel">
+    <div class="data-panel-head"><div><h2>Recipe item replacement — @JsonDataStore.DivisionDisplayName(Model.Division)</h2><span>Quantities, units, notes and costing overrides remain unchanged.</span></div></div>
+    <div style="padding:1rem 1.25rem">
+        <form method="get" class="filters" style="margin-bottom:1rem">
+            <input type="hidden" name="division" value="@Model.Division" />
+            <label>Find current recipe item<input name="q" value="@Model.Query" placeholder="Example: oil 50/50 blend" /></label>
+            <button class="button secondary" type="submit">Search</button>
+            <a class="button ghost" asp-action="MenuAdjustments">Clear</a>
+        </form>
+
+        <form method="get" id="approvedProductSearchForm" style="display:none">
+            <input type="hidden" name="division" value="@Model.Division" />
+            <input type="hidden" name="q" value="@Model.Query" />
+            <input type="hidden" name="sourceIngredient" value="@Model.SourceIngredient" />
+            <input type="hidden" name="aplQ" id="approvedProductSearchValue" value="@Model.ApprovedProductQuery" />
+        </form>
+
+        <form asp-action="ReplaceMenuItem" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="division" value="@Model.Division" />
+            <div class="form-grid two">
+                <label>Current item used in recipes
+                    <select name="sourceIngredient" required id="sourceIngredient">
+                        <option value="">Select existing item</option>
+                        @foreach (var item in Model.Ingredients)
+                        {
+                            if (Model.SourceIngredient.Equals(item.IngredientName, StringComparison.OrdinalIgnoreCase))
+                            {
+                                <option value="@item.IngredientName" selected>@item.IngredientName — @item.RecipeCount recipes / @item.IngredientLineCount lines</option>
+                            }
+                            else
+                            {
+                                <option value="@item.IngredientName">@item.IngredientName — @item.RecipeCount recipes / @item.IngredientLineCount lines</option>
+                            }
+                        }
+                    </select>
+                </label>
+                <div>
+                    <label>Search approved products
+                        <input name="aplSearchDisplay" value="@Model.ApprovedProductQuery" placeholder="Product name, APL code or division" form="approvedProductSearchForm" />
+                    </label>
+                    <button class="button secondary" type="submit" form="approvedProductSearchForm" style="margin-top:.5rem">Search approved products</button>
+                    <label style="margin-top:.75rem">Replace with approved product
+                        <select name="replacementProductId" required>
+                            <option value="">Select active APL product</option>
+                            @foreach (var product in Model.ApprovedProducts)
+                            {
+                                <option value="@product.Id">@product.ProductName — @product.ProductCode — @product.Division — R @product.UnitCost.ToString("N2") / @product.BaseUnits</option>
+                            }
+                        </select>
+                    </label>
+                    <small>@Model.ApprovedProducts.Count approved products shown.</small>
+                </div>
+            </div>
+            <div class="flash warning" style="margin-top:1rem">This is a bulk change. Every exact ingredient-name match will be replaced, and all affected recipes will be marked as administrator-corrected.</div>
+            <label class="form-check" style="margin-top:1rem"><input class="form-check-input" type="checkbox" name="confirmReplacement" value="true" id="confirmReplacement" required /><span class="form-check-label">I confirm that this replacement must be applied to all matching recipes.</span></label>
+            <button class="button danger" type="submit" style="margin-top:1rem">Replace item in all recipes</button>
+        </form>
+    </div>
+</section>
+
+
+<section class="data-panel" style="margin-top:1.25rem">
+    <div class="data-panel-head"><div><h2>Move to lower-price same ingredient — @JsonDataStore.DivisionDisplayName(Model.Division)</h2><span>Only exact ingredient-name matches are compared; similar or related products are excluded.</span></div><span>@Model.LowerComparableReplacements.Count opportunities</span></div>
+    <div style="padding:1rem 1.25rem">
+        <form method="get" class="filters" style="margin-bottom:1rem">
+            <input type="hidden" name="division" value="@Model.Division" />
+            <input type="hidden" name="q" value="@Model.Query" />
+            <input type="hidden" name="sourceIngredient" value="@Model.SourceIngredient" />
+            <input type="hidden" name="aplQ" value="@Model.ApprovedProductQuery" />
+            <label>Search approved products<input name="lowerQ" value="@Model.LowerProductQuery" placeholder="Ingredient name or APL code" /></label>
+            <button class="button secondary" type="submit">Search approved products</button>
+            <a class="button ghost" asp-action="MenuAdjustments" asp-route-q="@Model.Query" asp-route-sourceIngredient="@Model.SourceIngredient" asp-route-aplQ="@Model.ApprovedProductQuery">Clear</a>
+        </form>
+        <p>A product is eligible only when its normalized approved-product name is exactly the same as the current ingredient, it uses the same comparable unit, and its R/kg, R/L or R/each cost is lower.</p>
+        @if (Model.LowerComparableReplacements.Count == 0)
+        {
+            <div class="flash success">No lower-priced approved product was found for the exact same ingredients currently linked to recipes.</div>
+        }
+        else
+        {
+            <form asp-action="MoveToLowerComparableProducts" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="division" value="@Model.Division" />
+                <div class="table-wrap"><table><thead><tr><th><input id="selectAllLower" type="checkbox" aria-label="Select all replacements" /></th><th>Current product</th><th>Lower-priced same ingredient</th><th>Current</th><th>Lower</th><th>Saving</th><th>Recipes / lines</th></tr></thead><tbody>
+                @foreach (var row in Model.LowerComparableReplacements.Take(250))
+                {
+                    <tr><td><input class="lower-product-choice" type="checkbox" name="selectedSourceProductIds" value="@row.SourceProductId" aria-label="Select @row.SourceProductName" /></td><td><strong>@row.SourceProductName</strong><br/><small>@row.SourceProductCode</small></td><td><strong>@row.ReplacementProductName</strong><br/><small>@row.ReplacementProductCode</small></td><td>R @row.CurrentComparableCost.ToString("N2")/@row.ComparableUnit</td><td class="best-value-cell"><strong>R @row.LowerComparableCost.ToString("N2")/@row.ComparableUnit</strong></td><td>R @row.SavingPerComparableUnit.ToString("N2")/@row.ComparableUnit</td><td>@row.RecipeCount / @row.IngredientLineCount</td></tr>
+                }
+                </tbody></table></div>
+                <div class="flash warning" style="margin-top:1rem">Only the products ticked above will be changed. Unticked products remain unchanged.</div>
+                <label class="form-check" style="margin-top:1rem"><input class="form-check-input" type="checkbox" name="confirmLowerComparable" value="true" required /><span class="form-check-label">I have reviewed the selected exact-ingredient replacements and confirm the changes.</span></label>
+                <button class="button danger" type="submit" style="margin-top:1rem">Move selected products to lower price</button>
+            </form>
+        }
+    </div>
+</section>
+
+<section class="data-panel" style="margin-top:1.25rem">
+    <div class="data-panel-head"><h2>Current ingredient usage</h2><span>@Model.Ingredients.Count items</span></div>
+    <div class="table-wrap"><table><thead><tr><th>Current item</th><th>Recipes</th><th>Lines</th><th>Used in</th></tr></thead><tbody>
+    @foreach (var item in Model.Ingredients.Take(250))
+    {
+        <tr><td><a asp-action="MenuAdjustments" asp-route-sourceIngredient="@item.IngredientName"><strong>@item.IngredientName</strong></a></td><td>@item.RecipeCount</td><td>@item.IngredientLineCount</td><td>@string.Join(", ", item.RecipeNames.Take(5))@(item.RecipeNames.Count > 5 ? $" +{item.RecipeNames.Count - 5} more" : "")</td></tr>
+    }
+    </tbody></table></div>
+</section>
+
+@if (Model.RecentReplacements.Count > 0)
+{
+<section class="data-panel" style="margin-top:1.25rem">
+    <div class="data-panel-head"><h2>Recent bulk replacements</h2><span>Audit history</span></div>
+    <div class="table-wrap"><table><thead><tr><th>Date</th><th>Old item</th><th>Approved replacement</th><th>Recipes</th><th>Lines</th><th>Administrator</th></tr></thead><tbody>
+    @foreach (var audit in Model.RecentReplacements)
+    {
+        <tr><td>@audit.ReplacedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</td><td>@audit.SourceIngredientName</td><td><strong>@audit.ReplacementProductName</strong><br/><small>@audit.ReplacementProductCode</small></td><td>@audit.RecipesUpdated</td><td>@audit.IngredientLinesUpdated</td><td>@audit.ReplacedBy</td></tr>
+    }
+    </tbody></table></div>
+</section>
+}
+
+<script>
+(() => {
+    const display = document.querySelector('input[name="aplSearchDisplay"]');
+    const hidden = document.getElementById('approvedProductSearchValue');
+    const searchForm = document.getElementById('approvedProductSearchForm');
+    if (display && hidden && searchForm) {
+        searchForm.addEventListener('submit', () => { hidden.value = display.value; });
+        display.addEventListener('keydown', event => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                hidden.value = display.value;
+                searchForm.submit();
+            }
+        });
+    }
+    const selectAll = document.getElementById('selectAllLower');
+    if (selectAll) {
+        selectAll.addEventListener('change', () => {
+            document.querySelectorAll('.lower-product-choice').forEach(box => { box.checked = selectAll.checked; });
+        });
+    }
+})();
+</script>

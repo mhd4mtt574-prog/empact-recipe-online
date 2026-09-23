@@ -1,0 +1,4 @@
+@{ ViewData["Title"]="Allergens"; var items=(IEnumerable<dynamic>)ViewBag.Items; }
+<div class="page-heading"><div><span class="eyebrow">FOOD SAFETY</span><h1>Allergen control</h1><p>Monitor declared allergens and supplier-verification requirements.</p></div></div>
+<section class="metric-grid compact-metrics"><article class="metric-card warning"><span class="metric-icon">⚠</span><div><small>Supplier checks</small><strong>@ViewBag.ReviewCount</strong><p>Recipes requiring verification</p></div></article><article class="metric-card"><span class="metric-icon">◉</span><div><small>Allergen groups</small><strong>@items.Count()</strong><p>Recorded in the library</p></div></article></section>
+<section class="data-panel"><div class="data-panel-head"><h2>Allergen frequency</h2></div><div class="allergen-list">@foreach(var i in items){<div><span>@i.Name</span><strong>@i.Recipes recipes</strong></div>}</div></section>

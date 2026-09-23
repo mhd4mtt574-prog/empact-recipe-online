@@ -1,0 +1,23 @@
+@model ResaleAccessViewModel
+@{ ViewData["Title"] = "Resale Pricing Login"; }
+
+<div class="resale-login-shell">
+    <section class="resale-login-card">
+        <span class="eyebrow">VALUE ADDED · RESALE PRICING</span>
+        <h1>Unit Login</h1>
+        <p>Enter your ID number. Your allocated unit and pricing category will be identified automatically.</p>
+
+        <form asp-action="Access" method="post" class="resale-login-form">
+            <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+            <label asp-for="IdNumber"></label>
+            <input asp-for="IdNumber" inputmode="numeric" maxlength="13" autocomplete="off" placeholder="13-digit ID number" />
+            <span asp-validation-for="IdNumber" class="field-validation-error"></span>
+            <button class="button primary" type="submit">View my pricing</button>
+        </form>
+
+        <div class="resale-login-note">
+            <strong>How it works</strong>
+            <span>Your ID is matched to your allocated unit. The unit's Category A or B price list then opens automatically.</span>
+        </div>
+    </section>
+</div>

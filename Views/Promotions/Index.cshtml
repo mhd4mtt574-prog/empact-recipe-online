@@ -1,0 +1,30 @@
+@model List<Promotion>
+@{ ViewData["Title"]="Promotions"; }
+<div class="page-heading">
+    <div><span class="eyebrow">OPERATIONAL COMMUNICATION</span><h1>Promotions</h1><p>Current campaigns and downloadable unit material.</p></div>
+    @if(User.IsInRole("Administrator")){<a class="button primary" asp-action="Create">＋ Add promotion</a>}
+</div>
+@if(Model.Count==0){<div class="empty-state"><h2>No promotions available</h2><p>Published promotions will appear here.</p></div>}
+<div class="promotion-grid">
+@foreach(var item in Model)
+{
+    <article class="promotion-card @(item.IsActive?"active":"inactive")">
+        <div class="promotion-card-head"><span class="viz-badge">@(item.IsActive?"ACTIVE":item.IsPublished?"RESOURCE AVAILABLE":"UNPUBLISHED")</span><small>@item.Region</small></div>
+        <h2>@item.Title</h2>
+        <p>@item.Description</p>
+        <div class="promotion-dates"><strong>@item.StartDate.ToString("dd MMM yyyy")</strong>@if(item.EndDate.Date != item.StartDate.Date){<span>to</span><strong>@item.EndDate.ToString("dd MMM yyyy")</strong>}</div>
+        @if(!string.IsNullOrWhiteSpace(item.DocumentUrl))
+        {
+            <div class="promotion-document-actions">
+                <a class="button secondary compact" asp-action="ViewDocument" asp-route-id="@item.Id" target="_blank" rel="noopener">View</a>
+                <a class="button primary compact" asp-action="Download" asp-route-id="@item.Id">⬇ Download</a>
+                <a class="button secondary compact" asp-action="Print" asp-route-id="@item.Id" target="_blank">🖨 Print</a>
+            </div>
+        }
+        @if(User.IsInRole("Administrator"))
+        {
+            <div class="promotion-actions"><a class="button secondary compact" asp-action="Edit" asp-route-id="@item.Id">Edit</a><form asp-action="Delete" method="post" onsubmit="return confirm('Remove this promotion?');"><input type="hidden" name="id" value="@item.Id"/><button class="button secondary compact" type="submit">Remove</button></form></div>
+        }
+    </article>
+}
+</div>

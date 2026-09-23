@@ -1,0 +1,108 @@
+@model IReadOnlyList<ApprovedProduct>
+@{
+    ViewData["Title"] = "Approved Product List";
+    var query = ViewBag.Query as string;
+    var status = ViewBag.Status as string;
+    var division = (ViewBag.Division as string) ?? "CT";
+    var currentPage = (int)ViewBag.Page;
+    var totalPages = (int)ViewBag.TotalPages;
+    var totalProducts = (int)ViewBag.TotalProducts;
+    var counts = ViewBag.DivisionCounts as IDictionary<string,int> ?? new Dictionary<string,int>();
+    var ctCount = counts.TryGetValue("CT", out var ctValue) ? ctValue : 0;
+    var jhbCount = counts.TryGetValue("JHB", out var jhbValue) ? jhbValue : 0;
+    var kznCount = counts.TryGetValue("KZN", out var kznValue) ? kznValue : 0;
+}
+<div class="page-heading">
+    <div>
+        <span class="eyebrow">COST CONTROL</span>
+        <h1>Approved Product List</h1>
+        <p>Maintain regional approved products and update recipe costs by product code.</p>
+    </div>
+    <form asp-action="ApplyAll" method="post">
+        <input type="hidden" name="division" value="@division" />
+        <button class="button primary" type="submit">↻ Apply all costs</button>
+    </form>
+</div>
+@if (TempData["Error"] is string error) { <div class="flash error">⚠ @error</div> }
+@if (TempData["Success"] is string success) { <div class="flash success">✓ @success</div> }
+
+<div class="apl-division-tabs">
+    <a class="apl-division-tab @(division=="CT" ? "active" : "")" asp-action="Index" asp-route-division="CT">
+        <strong>CT</strong><span>Cape Town</span><small>@ctCount products</small>
+    </a>
+    <a class="apl-division-tab @(division=="JHB" ? "active" : "")" asp-action="Index" asp-route-division="JHB">
+        <strong>JHB</strong><span>Gauteng</span><small>@jhbCount products</small>
+    </a>
+    <a class="apl-division-tab @(division=="KZN" ? "active" : "")" asp-action="Index" asp-route-division="KZN">
+        <strong>KZN</strong><span>KwaZulu-Natal</span><small>@kznCount products</small>
+    </a>
+</div>
+@if ((bool)ViewBag.IsAdministrator)
+{
+    <div class="flash info">Administrator accounts open on the <strong>Cape Town APL</strong> by default.</div>
+}
+
+<div class="metric-grid compact-metrics">
+    <div class="metric-card"><div class="metric-icon">▦</div><div><small>@division approved products</small><strong>@totalProducts</strong><p>Imported from July 2026 APL</p></div></div>
+    <div class="metric-card"><div class="metric-icon">⛓</div><div><small>Linked ingredient lines</small><strong>@ViewBag.LinkedLines</strong><p>Across @ViewBag.RecipeCount recipes</p></div></div>
+</div>
+
+<section class="data-panel apl-create-panel">
+    <div class="data-panel-head"><div><h2>Add approved product</h2><span>Create a manual product entry for the selected division.</span></div></div>
+    <form asp-action="Create" method="post" class="apl-create-grid">
+        <input type="hidden" name="division" value="@division" />
+        <label>Division<input value="@division" readonly /></label>
+        <label>Product code<input name="productCode" placeholder="e.g. 00362" required /></label>
+        <label>Product name<input name="productName" placeholder="e.g. Beef mince 95/5" required /></label>
+        <label>Unit<input name="unitOfMeasure" placeholder="1X1KG" /></label>
+        <label>Unit cost (R)<input name="unitCost" inputmode="decimal" placeholder="86.00" required /></label>
+        <label>Contains allergens<input name="allergens" placeholder="e.g. Milk, Soy, Gluten (wheat)" /></label>
+        <label>May contain<input name="mayContain" placeholder="e.g. Tree nuts, Sesame" /></label>
+        <label class="apl-active"><input type="checkbox" name="allergenVerificationRequired" value="true" /><span>Supplier label verification required</span></label>
+        <button class="button primary" type="submit">Add product</button>
+    </form>
+</section>
+
+<form method="get" class="filter-panel apl-filter">
+    <input type="hidden" name="division" value="@division" />
+    <label>Search<input name="q" value="@query" placeholder="Code, supplier code, product, vendor or contract" /></label>
+    <label>Status<select name="status"><option value="">All products</option><option value="active" selected="@(status=="active")">Active</option><option value="inactive" selected="@(status=="inactive")">Inactive</option></select></label>
+    <button class="button secondary" type="submit">Filter</button>
+    <a class="clear-filter" asp-action="Index" asp-route-division="@division">Clear</a>
+</form>
+
+<section class="data-panel">
+    <div class="data-panel-head"><h2>@division product cost master</h2><span>Showing @Model.Count of @totalProducts products · page @currentPage of @totalPages</span></div>
+    <div class="apl-list">
+        @foreach (var p in Model)
+        {
+            <form asp-action="Update" method="post" class="apl-row apl-row-expanded">
+                <input type="hidden" name="id" value="@p.Id" />
+                <input type="hidden" name="division" value="@division" />
+                <input type="hidden" name="q" value="@query" />
+                <input type="hidden" name="status" value="@status" />
+                <input type="hidden" name="page" value="@currentPage" />
+                <div class="apl-code"><label>Product code</label><input value="@p.ProductCode" readonly /><small>Supplier: @p.SupplierItemCode</small></div>
+                <div class="apl-name"><label>Product name</label><input name="productName" value="@p.ProductName" required /><small>@p.Brand · @p.VendorName</small></div>
+                <div><label>Contract</label><input value="@p.ContractCode" readonly /></div>
+                <div><label>Pack / UOM</label><input name="unitOfMeasure" value="@p.UnitOfMeasure" /></div>
+                <div><label>Unit cost (R)</label><input name="unitCost" value="@p.UnitCost.ToString("0.00")" inputmode="decimal" /></div>
+                <div><label>Contains allergens</label><input name="allergens" value="@string.Join(", ", p.Allergens)" placeholder="Milk, Soy" /></div>
+                <div><label>May contain</label><input name="mayContain" value="@string.Join(", ", p.MayContainAllergens)" placeholder="Tree nuts" /></div>
+                <label class="apl-active"><input type="checkbox" name="allergenVerificationRequired" value="true" checked="@p.AllergenVerificationRequired" /><span>Verify label</span></label>
+                <label class="apl-active"><input type="checkbox" name="isActive" value="true" checked="@p.IsActive" /><span>Active</span></label>
+                <button class="button primary compact" type="submit">Save cost</button>
+                <div class="apl-meta">Vendor code: @p.VendorCode · Base units: @p.BaseUnits · Updated @p.UpdatedAtUtc.ToLocalTime().ToString("dd MMM yyyy") by @p.UpdatedBy</div>
+            </form>
+        }
+        @if (!Model.Any()) { <div class="empty"><div class="empty-icon">▦</div><h2>No products found</h2><p>Adjust the filters or switch divisions.</p></div> }
+    </div>
+    @if (totalPages > 1)
+    {
+        <nav class="apl-pagination" aria-label="Approved product pages">
+            @if (currentPage > 1) { <a class="button secondary compact" asp-action="Index" asp-route-division="@division" asp-route-q="@query" asp-route-status="@status" asp-route-page="@(currentPage-1)">← Previous</a> }
+            <span>Page @currentPage of @totalPages</span>
+            @if (currentPage < totalPages) { <a class="button secondary compact" asp-action="Index" asp-route-division="@division" asp-route-q="@query" asp-route-status="@status" asp-route-page="@(currentPage+1)">Next →</a> }
+        </nav>
+    }
+</section>

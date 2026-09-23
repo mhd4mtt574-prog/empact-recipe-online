@@ -1,0 +1,542 @@
+[
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Lemon, Herb & Garlic Steam/Grilled Chicken",
+    "Row": 17,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Peri Peri Roasted Chicken Thigh",
+    "Row": 74,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Lemon & Herb Roasted Chicken",
+    "Row": 100,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Lemon & Herb Roasted Chicken",
+    "Row": 101,
+    "OriginalProduct": "chicken stock from trays",
+    "SubstituteCode": "GR0016",
+    "SubstituteProduct": "GRAVY CHICKEN STOCK",
+    "Score": 0.584
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Hearty Chicken Stew",
+    "Row": 351,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Roasted Garlic & Paprika Roasted Chicken",
+    "Row": 410,
+    "OriginalProduct": "water/ roasting juices from trays",
+    "SubstituteCode": "82363",
+    "SubstituteProduct": "WATER SPARKLING BERRY",
+    "Score": 0.37
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Chicken in tomato & Onion Gravy",
+    "Row": 466,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 1",
+    "Recipe": "Cape Malay Chicken Curry",
+    "Row": 529,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Honey & Garlic Roasted Chicken",
+    "Row": 46,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Chicken Alfredo Pasta",
+    "Row": 76,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Chicken a la king",
+    "Row": 186,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Butter Chicken Curry",
+    "Row": 297,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Butter Chicken Curry",
+    "Row": 301,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Chicken & Mushroom Pie",
+    "Row": 354,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 2",
+    "Recipe": "Chicken Lasagna",
+    "Row": 387,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Chicken Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Poultry 3",
+    "Recipe": "Sticky Apricot Chicken Wings",
+    "Row": 352,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Fish",
+    "Recipe": "Deep fried hake",
+    "Row": 44,
+    "OriginalProduct": "OIL",
+    "SubstituteCode": "96080",
+    "SubstituteProduct": "OIL OLIVE",
+    "Score": 0.603
+  },
+  {
+    "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Fish",
+    "Recipe": "Pub Style Hake",
+    "Row": 214,
+    "OriginalProduct": "oil",
+    "SubstituteCode": "96080",
+    "SubstituteProduct": "OIL OLIVE",
+    "Score": 0.603
+  },
+  {
+    "Workbook": "Fish Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Fish",
+    "Recipe": "Fish Pie",
+    "Row": 302,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Mutton & Lamb Recipes Costings Jan 2024.xlsm",
+    "Sheet": "Mutton Lamb 1",
+    "Recipe": "Irish Hot Pot",
+    "Row": 99,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pork 1",
+    "Recipe": "PORK SCHNITZEL",
+    "Row": 100,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pork 1",
+    "Recipe": "Pork Stir-fry",
+    "Row": 126,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pork 1",
+    "Recipe": "Herb Roasted Pork Neck",
+    "Row": 159,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pork 1",
+    "Recipe": "Polony & Chakalaka Vetkoek",
+    "Row": 244,
+    "OriginalProduct": "water-warm",
+    "SubstituteCode": "82399",
+    "SubstituteProduct": "WATER SPARKLING",
+    "Score": 0.553
+  },
+  {
+    "Workbook": "Pork Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pork 1",
+    "Recipe": "Slow roasted pork belly",
+    "Row": 438,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Green Salad with Olives & Peppadews",
+    "Row": 185,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Celery Parsley Salad with Raisins",
+    "Row": 212,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Green Pea, Cucumber & Mint Salad",
+    "Row": 297,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Barley Salad with Chickpeas and Pears",
+    "Row": 381,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Tomato, Cucumber & Fennel Salad",
+    "Row": 409,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Green Vegetable Salad with crunchy seeds",
+    "Row": 440,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Golden Corn Salad with Fresh Basil & Rocket",
+    "Row": 523,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Traditional Greek Salad",
+    "Row": 551,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Greens with Candied Walnuts and Pears",
+    "Row": 633,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 1",
+    "Recipe": "Italian Salad",
+    "Row": 665,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 2",
+    "Recipe": "Copper Penny Salad",
+    "Row": 51,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Salad Costings Jan 2024.xlsm",
+    "Sheet": "SALADS 80G 2",
+    "Recipe": "Garden Salad",
+    "Row": 100,
+    "OriginalProduct": "Vinaigrette Salad Dressing Recipe",
+    "SubstituteCode": "17067",
+    "SubstituteProduct": "SALAD DRESSING GREEK",
+    "Score": 0.612
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Grains",
+    "Recipe": "Mielie Rice",
+    "Row": 97,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Grains",
+    "Recipe": "Creamy Samp",
+    "Row": 152,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Grains",
+    "Recipe": "Creamy Samp",
+    "Row": 153,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Rice",
+    "Recipe": "Yellow Rice",
+    "Row": 156,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Rice",
+    "Recipe": "Citrus, Cilantro Rice",
+    "Row": 184,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Rice",
+    "Recipe": "Parsley Brown Rice",
+    "Row": 264,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Bread",
+    "Recipe": "Dumplings/Dombolo",
+    "Row": 15,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Bread",
+    "Recipe": "Vetkoek",
+    "Row": 44,
+    "OriginalProduct": "water - warm",
+    "SubstituteCode": "82399",
+    "SubstituteProduct": "WATER SPARKLING",
+    "Score": 0.553
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Bread",
+    "Recipe": "Naan Bread - Made",
+    "Row": 101,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pasta",
+    "Recipe": "Penne Pasta",
+    "Row": 125,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pasta",
+    "Recipe": "Savoury Cous Cous",
+    "Row": 155,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Starch Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Pasta",
+    "Recipe": "Chinese Noodles",
+    "Row": 182,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Vegetarian 1",
+    "Recipe": "Pearl Barley, Butternut Rissoto",
+    "Row": 266,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Vegetarian 2",
+    "Recipe": "Curried Soya Beef Mince Style Fry",
+    "Row": 94,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Vegetarian 2",
+    "Recipe": "Vegetable Calzone",
+    "Row": 291,
+    "OriginalProduct": "warm water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.491
+  },
+  {
+    "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "Vegetarian 2",
+    "Recipe": "Spicy Potato Strudel",
+    "Row": 352,
+    "OriginalProduct": "water",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  },
+  {
+    "Workbook": "Vegetarian Recipes & Costings Jan 2024.xlsm",
+    "Sheet": "veg",
+    "Recipe": "Curried BEAN SALAD",
+    "Row": 107,
+    "OriginalProduct": "WATER",
+    "SubstituteCode": "82398",
+    "SubstituteProduct": "WATER STILL",
+    "Score": 0.651
+  }
+]

@@ -1,0 +1,49 @@
+@model RecipeAplLinkViewModel
+@{
+    ViewData["Title"] = "Link recipe ingredients";
+    var selected = Model.Recipe.Ingredients[Model.IngredientIndex];
+}
+<div class="page-heading">
+    <div><span class="eyebrow">APPROVED PRODUCT LINKING</span><h1>Link recipe ingredients</h1><p>@Model.Recipe.Name · @Model.Recipe.Code · @Model.Division APL</p></div>
+    <div class="heading-actions"><a class="button secondary" asp-controller="Recipes" asp-action="Details" asp-route-id="@Model.Recipe.Id">View recipe</a><a class="button primary" asp-controller="Recipes" asp-action="Edit" asp-route-id="@Model.Recipe.Id">Edit recipe</a></div>
+</div>
+<div class="apl-link-layout">
+    <aside class="apl-link-lines">
+        <h2>Recipe ingredients</h2>
+        <p>Select an ingredient, then choose its approved product.</p>
+        @for (var i = 0; i < Model.Recipe.Ingredients.Count; i++)
+        {
+            var line = Model.Recipe.Ingredients[i];
+            <a class="apl-link-line @(i == Model.IngredientIndex ? "active" : "")" asp-action="Index" asp-route-recipeId="@Model.Recipe.Id" asp-route-ingredientIndex="@i" asp-route-q="@line.Name">
+                <strong>@line.Name</strong><span>@line.Quantity.ToString("N3") @line.Unit · R @line.UnitCost.ToString("N2") · factor @line.EffectiveFactor.ToString("N3")</span>
+                @if(line.IsAplLinked){<small class="linked">✓ @line.AplDivision · @line.ProductCode</small>}else{<small class="unlinked">Not linked</small>}
+            </a>
+        }
+    </aside>
+    <section class="apl-link-main">
+        <div class="current-link-card">
+            <div><span class="eyebrow">SELECTED INGREDIENT</span><h2>@selected.Name</h2><p>@selected.Quantity.ToString("N3") @selected.Unit · Current cost R @selected.UnitCost.ToString("N2")</p></div>
+            @if(selected.IsAplLinked)
+            {
+                <div class="link-status"><strong>Linked</strong><span>@selected.AplDivision · @selected.ProductCode</span></div>
+                <form asp-action="Unlink" method="post"><input type="hidden" name="recipeId" value="@Model.Recipe.Id"/><input type="hidden" name="ingredientIndex" value="@Model.IngredientIndex"/><button class="button secondary" type="submit">Unlink</button></form>
+            }
+        </div>
+        <form method="get" class="apl-link-search">
+            <input type="hidden" name="recipeId" value="@Model.Recipe.Id"/><input type="hidden" name="ingredientIndex" value="@Model.IngredientIndex"/>
+            <label>Search the @Model.Division Approved Product List<input name="q" value="@Model.Search" placeholder="Product code, name, supplier code or vendor"/></label>
+            <button class="button primary" type="submit">Search APL</button>
+        </form>
+        <div class="apl-link-results">
+            <div class="results-bar"><strong>@Model.Matches.Count matching products</strong><span>Linking replaces the ingredient name, unit and cost with the selected APL item.</span></div>
+            @foreach(var product in Model.Matches)
+            {
+                <div class="apl-link-product">
+                    <div><strong>@product.ProductName</strong><span>@product.ProductCode · @product.UnitOfMeasure · R @product.UnitCost.ToString("N2")</span><small>@product.VendorName @(!string.IsNullOrWhiteSpace(product.SupplierItemCode) ? "· Supplier code " + product.SupplierItemCode : "")</small></div>
+                    <form asp-action="Link" method="post"><input type="hidden" name="recipeId" value="@Model.Recipe.Id"/><input type="hidden" name="ingredientIndex" value="@Model.IngredientIndex"/><input type="hidden" name="productId" value="@product.Id"/><button class="button primary compact" type="submit">Link product</button></form>
+                </div>
+            }
+            @if(Model.Matches.Count == 0){<div class="empty-state"><h3>No products found</h3><p>Try the product description, supplier code, vendor or a shorter search term.</p></div>}
+        </div>
+    </section>
+</div>

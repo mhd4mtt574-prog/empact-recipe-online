@@ -1,0 +1,118 @@
+@using EmpactRecipeOnline.Models
+@{
+    ViewData["Title"] = "User Management";
+    var items = (IEnumerable<AppUser>)ViewBag.Items;
+    var roles = (IEnumerable<string>)ViewBag.Roles;
+    var query = (string)ViewBag.Query;
+    var status = (string)ViewBag.Status;
+    var selectedRole = (string)ViewBag.Role;
+}
+
+<div class="page-heading">
+    <div>
+        <span class="eyebrow">ADMINISTRATION</span>
+        <h1>User Management</h1>
+        <p>Search user accounts, review unit access, reset passwords and activate or deactivate access.</p>
+    </div>
+</div>
+
+@if (TempData["Success"] is string success)
+{
+    <div class="alert success"><strong>Done.</strong> @success</div>
+}
+@if (TempData["Error"] is string error)
+{
+    <div class="alert error"><strong>Action not completed.</strong> @error</div>
+}
+
+<section class="data-panel" style="margin-bottom:18px;">
+    <form method="get" class="filter-grid" style="align-items:end;">
+        <label>
+            <span>Search</span>
+            <input name="q" value="@query" placeholder="Username, unit code, name or email" />
+        </label>
+        <label>
+            <span>Role</span>
+            <select name="role">
+                <option value="">All roles</option>
+                @foreach (var roleName in roles)
+                {
+                    <option value="@roleName" selected="@(selectedRole.Equals(roleName, StringComparison.OrdinalIgnoreCase))">@roleName</option>
+                }
+            </select>
+        </label>
+        <label>
+            <span>Status</span>
+            <select name="status">
+                <option value="">All users</option>
+                <option value="active" selected="@(status == "active")">Active</option>
+                <option value="inactive" selected="@(status == "inactive")">Inactive</option>
+            </select>
+        </label>
+        <div style="display:flex;gap:8px;">
+            <button class="button primary" type="submit">Search</button>
+            <a class="button secondary" asp-action="Users">Clear</a>
+        </div>
+    </form>
+</section>
+
+<section class="data-panel">
+    <div class="panel-heading">
+        <div>
+            <span class="eyebrow">ACCOUNT DIRECTORY</span>
+            <h2>@items.Count() user@(items.Count() == 1 ? "" : "s")</h2>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Unit</th>
+                    <th>Region</th>
+                    <th>Status</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var i in items)
+            {
+                var active = i.IsActive && i.IsApproved;
+                <tr>
+                    <td><strong>@i.DisplayName</strong>@if(!string.IsNullOrWhiteSpace(i.Email)){<small class="table-sub">@i.Email</small>}</td>
+                    <td><strong>@i.Username</strong>@if(!string.IsNullOrWhiteSpace(i.UnitCode) && !i.UnitCode.Equals(i.Username, StringComparison.OrdinalIgnoreCase)){<small class="table-sub">Unit code: @i.UnitCode</small>}</td>
+                    <td>@i.Role</td>
+                    <td>@i.Unit</td>
+                    <td>@i.Region</td>
+                    <td><span class="status @(active ? "approved" : "draft")">@(active ? "Active" : "Inactive")</span></td>
+                    <td>@if(i.MustChangePassword){<span class="status draft">Change required</span>}else{<span class="status approved">Current</span>}</td>
+                    <td>
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                            <form asp-action="ResetUserPassword" method="post" onsubmit="return confirm('Reset @i.Username to the temporary password Empact@2026! and require a password change at next login?');">
+                                <input type="hidden" name="id" value="@i.Id" />
+                                <button class="button secondary" type="submit">Reset password</button>
+                            </form>
+                            <form asp-action="ToggleUserActive" method="post" onsubmit="return confirm('@(active ? "Deactivate" : "Activate") @i.Username?');">
+                                <input type="hidden" name="id" value="@i.Id" />
+                                <button class="button @(active ? "secondary" : "primary")" type="submit">@(active ? "Deactivate" : "Activate")</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+            @if (!items.Any())
+            {
+                <tr><td colspan="8"><div class="empty-state">No users match the selected filters.</div></td></tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="info-panel" style="margin-top:18px;">
+    <h3>Password reset process</h3>
+    <p>Resetting an account creates a new password hash for <strong>Empact@@2026!</strong>, activates the account, and forces the user to choose a new password after their next successful login. Passwords themselves are never stored in plain text.</p>
+</section>

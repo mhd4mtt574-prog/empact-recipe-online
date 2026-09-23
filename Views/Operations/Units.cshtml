@@ -1,0 +1,3 @@
+@{ ViewData["Title"]="Units"; var items=(IEnumerable<dynamic>)ViewBag.Items; }
+<div class="page-heading"><div><span class="eyebrow">ADMINISTRATION</span><h1>Units</h1><p>Review unit access, users and recipe allocation.</p></div><button class="button primary" type="button">＋ Add unit</button></div>
+<div class="unit-grid">@foreach(var i in items){<article class="unit-card"><div class="unit-avatar">@i.Name.Substring(0,1)</div><div><h3>@i.Name</h3><p>@i.Users users · @i.Recipes recipes</p></div><button type="button">Manage</button></article>}</div>

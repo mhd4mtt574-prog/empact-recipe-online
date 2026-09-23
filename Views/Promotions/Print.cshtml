@@ -1,0 +1,7 @@
+@model Promotion
+@{ Layout = null; }
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Print @Model.Title</title>
+<style>html,body{height:100%;margin:0;font-family:Arial,sans-serif;background:#f2f2f2}.bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border-bottom:1px solid #ddd}.bar strong{margin-right:auto}.bar button,.bar a{border:0;border-radius:8px;padding:10px 16px;text-decoration:none;cursor:pointer;background:#f3c316;color:#111;font-weight:700}.bar a{background:#eee}iframe{display:block;width:100%;height:calc(100% - 65px);border:0;background:#fff}@@media print{.bar{display:none}iframe{height:100vh}}</style></head>
+<body><div class="bar"><strong>@Model.Title</strong><a href="@Model.DocumentUrl">Open PDF</a><button type="button" id="printButton">Print</button></div><iframe id="documentFrame" src="@Model.DocumentUrl" title="@Model.Title PDF"></iframe>
+<script>document.getElementById('printButton').addEventListener('click',function(){const frame=document.getElementById('documentFrame');try{frame.contentWindow.focus();frame.contentWindow.print();}catch(e){window.print();}});</script></body></html>
